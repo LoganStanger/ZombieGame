@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bo3refg2iqy0h"]
+
+[ext_resource type="Texture2D" uid="uid://8jqhtrxbjho1" path="res://HumanHuman.png" id="1_hlqj1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_clei7"]
+size = Vector2(52, 40)
+
+[node name="Area2D" type="Area2D" unique_id=1541544226]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1284389459]
+position = Vector2(-4.7683716e-07, 0)
+scale = Vector2(0.53094226, 0.5063291)
+texture = ExtResource("1_hlqj1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2016552975]
+shape = SubResource("RectangleShape2D_clei7")
