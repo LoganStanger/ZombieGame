@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://cyxn220acpryl"]
 
+[ext_resource type="Script" uid="uid://yscnho53ggcq" path="res://Scenes/game_manager.gd" id="1_bvqnw"]
 [ext_resource type="PackedScene" uid="uid://djt5pbq7pbexk" path="res://prefabs/playertwo.tscn" id="2_j8pi6"]
 [ext_resource type="Script" uid="uid://dnwfaagu6yfp1" path="res://sciptQuestionMark/label.gd" id="3_g232c"]
 [ext_resource type="Texture2D" uid="uid://bjkiupg1vequ7" path="res://icon.svg" id="3_qmsdt"]
@@ -8,7 +9,8 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g232c"]
 size = Vector2(64, 647)
 
-[node name="Node2D" type="Node2D" unique_id=2083841095]
+[node name="GameManager" type="Node2D" unique_id=2083841095]
+script = ExtResource("1_bvqnw")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1617380061]
 position = Vector2(360, 320)
@@ -50,3 +52,9 @@ offset_right = 236.0
 offset_bottom = 135.0
 text = "Boredom :( = "
 script = ExtResource("4_g232c")
+
+[node name="Timer" type="Timer" parent="." unique_id=985129448]
+wait_time = 0.5
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
