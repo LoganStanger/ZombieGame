@@ -20,7 +20,10 @@ texture = ExtResource("2_wrvgs")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=430608491]
 shape = SubResource("RectangleShape2D_wrvgs")
 
-[node name="LoganArea" type="Area2D" parent="." unique_id=1417049426]
+[node name="LoganArea" type="Area2D" parent="." unique_id=1417049426 groups=["loganArea"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LoganArea" unique_id=76233094]
 shape = SubResource("RectangleShape2D_yoka8")
+
+[connection signal="area_entered" from="LoganArea" to="." method="_on_logan_area_area_entered"]
+[connection signal="area_exited" from="LoganArea" to="." method="_on_logan_area_area_exited"]

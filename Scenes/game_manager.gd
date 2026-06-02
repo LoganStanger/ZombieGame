@@ -6,7 +6,8 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	if Booyah.hunger < 0:
+		
 
 func _on_timer_timeout() -> void:
 	Booyah.hunger -= Booyah.hungerSpeed

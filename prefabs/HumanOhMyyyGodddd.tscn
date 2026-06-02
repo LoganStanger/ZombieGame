@@ -6,6 +6,9 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hlqj1"]
 size = Vector2(64, 48)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_clei7"]
+size = Vector2(70, 52)
+
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=446698375]
 script = ExtResource("1_clei7")
 metadata/_edit_group_ = true
@@ -17,3 +20,8 @@ texture = ExtResource("1_hlqj1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1357271235]
 shape = SubResource("RectangleShape2D_hlqj1")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1759915938 groups=["enemies"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=762220406]
+shape = SubResource("RectangleShape2D_clei7")
