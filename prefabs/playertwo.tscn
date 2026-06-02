@@ -6,6 +6,9 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wrvgs"]
 size = Vector2(48, 40)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yoka8"]
+size = Vector2(50, 42)
+
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=184723477]
 script = ExtResource("1_wrvgs")
 metadata/_edit_group_ = true
@@ -16,3 +19,8 @@ texture = ExtResource("2_wrvgs")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=430608491]
 shape = SubResource("RectangleShape2D_wrvgs")
+
+[node name="LoganArea" type="Area2D" parent="." unique_id=1417049426]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LoganArea" unique_id=76233094]
+shape = SubResource("RectangleShape2D_yoka8")

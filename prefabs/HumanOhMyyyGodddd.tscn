@@ -1,16 +1,19 @@
 [gd_scene format=3 uid="uid://bo3refg2iqy0h"]
 
+[ext_resource type="Script" uid="uid://ca0yrf0dws4bd" path="res://sciptQuestionMark/human_oh_myyy_godddd.gd" id="1_clei7"]
 [ext_resource type="Texture2D" uid="uid://8jqhtrxbjho1" path="res://HumanHuman.png" id="1_hlqj1"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_clei7"]
-size = Vector2(52, 40)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hlqj1"]
+size = Vector2(64, 48)
 
-[node name="Area2D" type="Area2D" unique_id=1541544226]
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=446698375]
+script = ExtResource("1_clei7")
+metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1284389459]
-position = Vector2(-4.7683716e-07, 0)
-scale = Vector2(0.53094226, 0.5063291)
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1023675301]
+position = Vector2(-7.1525574e-07, 2.3841858e-06)
+scale = Vector2(0.6666667, 0.60759497)
 texture = ExtResource("1_hlqj1")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2016552975]
-shape = SubResource("RectangleShape2D_clei7")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1357271235]
+shape = SubResource("RectangleShape2D_hlqj1")

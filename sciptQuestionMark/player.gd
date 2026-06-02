@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+
 var IsDashing: bool = false
 var IsSprinting: bool = false
 var TrueDashing: bool = false
@@ -10,18 +11,22 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
-	if Input.is_action_just_pressed("ZombieBite"):
-		
-		await get_tree().create_timer(0.1).timeout
+	if Input.is_action_just_pressed("ZombieBite") and TrueDashing == false:
+		TrueDashing = true
+		Booyah.walk_speed -= 5000
+		Booyah.run_speed -= 5000
+		await get_tree().create_timer(0.2).timeout
 		IsDashing = true
-		Booyah.walk_speed += 500000
-		Booyah.run_speed += 500000
-		await get_tree().create_timer(0.1).timeout
-		Booyah.walk_speed -= 500000
-		Booyah.run_speed -= 500000
+		Booyah.hunger -= 200
+		Booyah.walk_speed += 50000
+		Booyah.run_speed += 50000
+		await get_tree().create_timer(0.15).timeout
+		Booyah.walk_speed -= 45000
+		Booyah.run_speed -= 45000
 		IsDashing = false
+		TrueDashing = false
 		
-		
+	
 	if Input.is_action_just_pressed("ZombieSprint") and IsSprinting == false:
 		IsSprinting = true
 		Booyah.hungerSpeed += 1

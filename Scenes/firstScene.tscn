@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://djt5pbq7pbexk" path="res://prefabs/playertwo.tscn" id="2_j8pi6"]
 [ext_resource type="Script" uid="uid://dnwfaagu6yfp1" path="res://sciptQuestionMark/label.gd" id="3_g232c"]
 [ext_resource type="Texture2D" uid="uid://bjkiupg1vequ7" path="res://icon.svg" id="3_qmsdt"]
+[ext_resource type="PackedScene" uid="uid://bo3refg2iqy0h" path="res://prefabs/HumanOhMyyyGodddd.tscn" id="4_c8uak"]
 [ext_resource type="Script" uid="uid://dllb6cvtfhtwr" path="res://sciptQuestionMark/boredom_bar_temp.gd" id="4_g232c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g232c"]
@@ -36,6 +37,9 @@ shape = SubResource("RectangleShape2D_g232c")
 
 [node name="CharacterBody2D" parent="." unique_id=184723477 instance=ExtResource("2_j8pi6")]
 position = Vector2(600, 320)
+
+[node name="CharacterBody2D2" parent="." unique_id=446698375 instance=ExtResource("4_c8uak")]
+position = Vector2(872, 320)
 
 [node name="HungerBarTemp" type="Label" parent="." unique_id=270291783]
 offset_left = 152.0
