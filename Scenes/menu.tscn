@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://xr54p2nuh4lq"]
+
+[node name="Node2D" type="Node2D" unique_id=1647401964]
+
+[node name="Button" type="Button" parent="." unique_id=1762506145]
+offset_left = 480.0
+offset_top = 256.0
+offset_right = 616.0
+offset_bottom = 336.0
+text = "Play"

@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-
+var gudck = false
 var IsSprinting: bool = false
 var TrueDashing: bool = false
 # Called when the node enters the scene tree for the first time.
@@ -24,6 +24,8 @@ func _physics_process(delta: float) -> void:
 		Booyah.run_speed -= 45000
 		Booyah.IsDashing = false
 		TrueDashing = false
+	if Booyah.IsDashing and gudck:
+		Booyah.hunger += 300
 		
 	
 	if Input.is_action_just_pressed("ZombieSprint") and IsSprinting == false:
@@ -45,14 +47,10 @@ func _physics_process(delta: float) -> void:
 
 
 func _on_logan_area_area_entered(area: Area2D) -> void:
-	if area.is_in_group("enemies") and Booyah.IsDashing == true:
-		print("Logan ahoy")
-		Booyah.hunger += 300
-	if area.is_in_group("enemies"):
-		Booyah.gudck = true
-		
-	
+	if area.is_in_group("enemies") and gudck == false:
+		area.get_parent().gudck = true
+		gudck = true
 
 func _on_logan_area_area_exited(area: Area2D) -> void:
-	if area.is_in_group("enemies") and Booyah.gudck == true:
-		print("Logan arrrrggg")
+	if area.is_in_group("enemies") and gudck:
+		gudck = false

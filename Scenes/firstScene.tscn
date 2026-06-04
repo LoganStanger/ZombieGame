@@ -38,8 +38,17 @@ shape = SubResource("RectangleShape2D_g232c")
 [node name="CharacterBody2D" parent="." unique_id=184723477 instance=ExtResource("2_j8pi6")]
 position = Vector2(600, 320)
 
-[node name="CharacterBody2D2" parent="." unique_id=446698375 instance=ExtResource("4_c8uak")]
+[node name="CharacterBody2D3" parent="." unique_id=446698375 instance=ExtResource("4_c8uak")]
 position = Vector2(872, 320)
+
+[node name="CharacterBody2D2" parent="." unique_id=1148857735 instance=ExtResource("4_c8uak")]
+position = Vector2(864, 200)
+
+[node name="CharacterBody2D4" parent="." unique_id=1382706505 instance=ExtResource("4_c8uak")]
+position = Vector2(872, 448)
+
+[node name="CharacterBody2D5" parent="." unique_id=55546703 instance=ExtResource("4_c8uak")]
+position = Vector2(856, 96)
 
 [node name="HungerBarTemp" type="Label" parent="." unique_id=270291783]
 offset_left = 152.0
