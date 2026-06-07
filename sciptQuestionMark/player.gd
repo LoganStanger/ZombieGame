@@ -16,7 +16,7 @@ func _physics_process(delta: float) -> void:
 		Booyah.run_speed -= 5000
 		await get_tree().create_timer(0.2).timeout
 		Booyah.IsDashing = true
-		Booyah.hunger -= 100
+		Booyah.hunger -= 40
 		Booyah.walk_speed += 50000
 		Booyah.run_speed += 50000
 		await get_tree().create_timer(0.15).timeout
@@ -25,7 +25,7 @@ func _physics_process(delta: float) -> void:
 		Booyah.IsDashing = false
 		TrueDashing = false
 	if Booyah.IsDashing and gudck:
-		Booyah.hunger += 300
+		Booyah.hunger += 100
 		
 	
 	if Input.is_action_just_pressed("ZombieSprint") and IsSprinting == false:

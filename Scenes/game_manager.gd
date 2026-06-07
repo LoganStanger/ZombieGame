@@ -6,9 +6,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	#keycard code
-	if Booyah.gdevelopholdover == true and :
-		pass
+	pass
 	
 	
 	if Booyah.hunger < 0:
@@ -18,4 +16,5 @@ func _process(delta: float) -> void:
 
 #code to decrease hunger
 func _on_timer_timeout() -> void:
+	Booyah.boredom -= 1
 	Booyah.hunger -= Booyah.hungerSpeed
