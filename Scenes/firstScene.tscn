@@ -6,9 +6,16 @@
 [ext_resource type="Texture2D" uid="uid://bjkiupg1vequ7" path="res://icon.svg" id="3_qmsdt"]
 [ext_resource type="PackedScene" uid="uid://bo3refg2iqy0h" path="res://prefabs/HumanOhMyyyGodddd.tscn" id="4_c8uak"]
 [ext_resource type="Script" uid="uid://dllb6cvtfhtwr" path="res://sciptQuestionMark/boredom_bar_temp.gd" id="4_g232c"]
+[ext_resource type="Texture2D" uid="uid://djygwk53ge352" path="res://Keycard.png" id="7_qv86q"]
+[ext_resource type="Script" uid="uid://co24uwmdpv1l7" path="res://sciptQuestionMark/Keycard.gd" id="8_gxyp4"]
+[ext_resource type="Texture2D" uid="uid://ciuct187kjfia" path="res://Elevator.png" id="9_hn31x"]
+[ext_resource type="Script" uid="uid://c7u2akjn041hi" path="res://sciptQuestionMark/elevator.gd" id="10_fit5p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g232c"]
 size = Vector2(64, 647)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bbrp3"]
+size = Vector2(189.11584, 126.07721)
 
 [node name="GameManager" type="Node2D" unique_id=2083841095]
 script = ExtResource("1_bvqnw")
@@ -50,6 +57,9 @@ position = Vector2(872, 448)
 [node name="CharacterBody2D5" parent="." unique_id=55546703 instance=ExtResource("4_c8uak")]
 position = Vector2(856, 96)
 
+[node name="CharacterBody2D6" parent="." unique_id=1458379597 instance=ExtResource("4_c8uak")]
+position = Vector2(464, 72)
+
 [node name="HungerBarTemp" type="Label" parent="." unique_id=270291783]
 offset_left = 152.0
 offset_top = 64.0
@@ -70,4 +80,23 @@ script = ExtResource("4_g232c")
 wait_time = 0.5
 autostart = true
 
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1565151067]
+position = Vector2(192, 256)
+scale = Vector2(0.6045751, 0.60457516)
+texture = ExtResource("7_qv86q")
+script = ExtResource("8_gxyp4")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1644601419]
+position = Vector2(752, 32)
+scale = Vector2(0.38071907, 0.38071907)
+texture = ExtResource("9_hn31x")
+script = ExtResource("10_fit5p")
+
+[node name="Area2D" type="Area2D" parent="Sprite2D2" unique_id=340153590 groups=["elevator"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D2/Area2D" unique_id=2019158400]
+position = Vector2(-10.506348, 0)
+shape = SubResource("RectangleShape2D_bbrp3")
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="area_entered" from="Sprite2D2/Area2D" to="Sprite2D2" method="_on_area_2d_area_entered"]
