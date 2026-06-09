@@ -14,6 +14,9 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g232c"]
 size = Vector2(64, 647)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hn31x"]
+size = Vector2(696, 48)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bbrp3"]
 size = Vector2(189.11584, 126.07721)
 
@@ -21,6 +24,7 @@ size = Vector2(189.11584, 126.07721)
 script = ExtResource("1_bvqnw")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1617380061]
+z_index = 5
 position = Vector2(360, 320)
 metadata/_edit_group_ = true
 
@@ -31,7 +35,36 @@ texture = ExtResource("3_qmsdt")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=2062981252]
 shape = SubResource("RectangleShape2D_g232c")
 
+[node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=706320154]
+z_index = 5
+position = Vector2(744, 624)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D3" unique_id=1625522337]
+position = Vector2(-3.0000317, 1.5258789e-05)
+scale = Vector2(5.453125, 0.35937524)
+texture = ExtResource("3_qmsdt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3" unique_id=1436937923]
+position = Vector2(-4, 0)
+shape = SubResource("RectangleShape2D_hn31x")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="." unique_id=286572700]
+z_index = 5
+position = Vector2(744, 24)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D4" unique_id=2036037116]
+position = Vector2(-3.0000317, 1.5258789e-05)
+scale = Vector2(5.453125, 0.35937524)
+texture = ExtResource("3_qmsdt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4" unique_id=456677479]
+position = Vector2(-4, 0)
+shape = SubResource("RectangleShape2D_hn31x")
+
 [node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=421133736]
+z_index = 5
 position = Vector2(1120, 320)
 metadata/_edit_group_ = true
 
@@ -43,24 +76,25 @@ texture = ExtResource("3_qmsdt")
 shape = SubResource("RectangleShape2D_g232c")
 
 [node name="CharacterBody2D" parent="." unique_id=184723477 instance=ExtResource("2_j8pi6")]
-position = Vector2(600, 320)
+position = Vector2(688, 288)
 
 [node name="CharacterBody2D3" parent="." unique_id=446698375 instance=ExtResource("4_c8uak")]
-position = Vector2(872, 320)
+position = Vector2(456, 120)
 
 [node name="CharacterBody2D2" parent="." unique_id=1148857735 instance=ExtResource("4_c8uak")]
-position = Vector2(864, 200)
+position = Vector2(1032, 560)
 
 [node name="CharacterBody2D4" parent="." unique_id=1382706505 instance=ExtResource("4_c8uak")]
-position = Vector2(872, 448)
+position = Vector2(928, 160)
 
 [node name="CharacterBody2D5" parent="." unique_id=55546703 instance=ExtResource("4_c8uak")]
-position = Vector2(856, 96)
+position = Vector2(840, 312)
 
 [node name="CharacterBody2D6" parent="." unique_id=1458379597 instance=ExtResource("4_c8uak")]
-position = Vector2(464, 72)
+position = Vector2(496, 496)
 
 [node name="HungerBarTemp" type="Label" parent="." unique_id=270291783]
+z_index = 5
 offset_left = 152.0
 offset_top = 64.0
 offset_right = 236.0
@@ -69,6 +103,7 @@ text = "Hunger!!!!!! = "
 script = ExtResource("3_g232c")
 
 [node name="BoredomBarTemp" type="Label" parent="." unique_id=1411340435]
+z_index = 5
 offset_left = 152.0
 offset_top = 112.0
 offset_right = 236.0
@@ -81,13 +116,14 @@ wait_time = 0.5
 autostart = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1565151067]
+z_index = 5
 position = Vector2(192, 256)
 scale = Vector2(0.6045751, 0.60457516)
 texture = ExtResource("7_qv86q")
 script = ExtResource("8_gxyp4")
 
 [node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1644601419]
-position = Vector2(752, 32)
+position = Vector2(744, 72)
 scale = Vector2(0.38071907, 0.38071907)
 texture = ExtResource("9_hn31x")
 script = ExtResource("10_fit5p")

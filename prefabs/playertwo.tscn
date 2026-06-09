@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bo8752rwqgeyg" path="res://sciptQuestionMark/player.gd" id="1_wrvgs"]
 [ext_resource type="Texture2D" uid="uid://b3g15u6u4vyfu" path="res://ZombieZombie.png" id="2_wrvgs"]
+[ext_resource type="Texture2D" uid="uid://dkkdjc66low4" path="res://Spotlight-removebg-preview.png" id="3_yoka8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wrvgs"]
 size = Vector2(48, 40)
@@ -10,6 +11,7 @@ size = Vector2(48, 40)
 size = Vector2(50, 42)
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=184723477]
+position = Vector2(45, 32)
 script = ExtResource("1_wrvgs")
 metadata/_edit_group_ = true
 
@@ -24,6 +26,12 @@ shape = SubResource("RectangleShape2D_wrvgs")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LoganArea" unique_id=76233094]
 shape = SubResource("RectangleShape2D_yoka8")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=563522976]
+z_index = 4
+position = Vector2(64, 47)
+scale = Vector2(2.155814, 2.155814)
+texture = ExtResource("3_yoka8")
 
 [connection signal="area_entered" from="LoganArea" to="." method="_on_logan_area_area_entered"]
 [connection signal="area_exited" from="LoganArea" to="." method="_on_logan_area_area_exited"]

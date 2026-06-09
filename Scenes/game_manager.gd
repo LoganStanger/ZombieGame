@@ -6,14 +6,16 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
-	
-	
+	if Booyah.hunger > 200:
+		Booyah.hunger = 200
 	if Booyah.hunger < 0:
+		Booyah.hunger = 0
+		Booyah.hungrySad = true
 		get_tree().change_scene_to_file("")
 
 
 #code to decrease hunger
 func _on_timer_timeout() -> void:
-	Booyah.boredom -= 1
-	Booyah.hunger -= Booyah.hungerSpeed
+	if Booyah.hungrySad == false:
+		Booyah.boredom -= 1
+		Booyah.hunger -= Booyah.hungerSpeed
