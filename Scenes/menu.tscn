@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://xr54p2nuh4lq"]
 
+[ext_resource type="Script" uid="uid://uf1bnbd88agn" path="res://sciptQuestionMark/button.gd" id="1_1rerr"]
+
 [node name="Node2D" type="Node2D" unique_id=1647401964]
 
 [node name="Button" type="Button" parent="." unique_id=1762506145]
@@ -8,3 +10,6 @@ offset_top = 256.0
 offset_right = 616.0
 offset_bottom = 336.0
 text = "Play"
+script = ExtResource("1_1rerr")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

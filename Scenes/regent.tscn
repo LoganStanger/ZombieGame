@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://bx0paf6l1tr8i"]
+
+[ext_resource type="Texture2D" uid="uid://doco3v6qvg5gp" path="res://MeritPlain.png" id="1_yial5"]
+[ext_resource type="Script" uid="uid://c3sesoih6ji0l" path="res://sciptQuestionMark/leftmost_merit.gd" id="2_j838w"]
+[ext_resource type="Script" uid="uid://b707db7coii4x" path="res://sciptQuestionMark/rightmost_merit.gd" id="3_q7340"]
+
+[node name="Node2D" type="Node2D" unique_id=49367222]
+
+[node name="Leftmost Merit" type="Sprite2D" parent="." unique_id=1044441130]
+position = Vector2(404.5, 293)
+texture = ExtResource("1_yial5")
+script = ExtResource("2_j838w")
+
+[node name="Button" type="Button" parent="Leftmost Merit" unique_id=1684169795]
+offset_left = -114.5
+offset_top = -140.0
+offset_right = 111.5
+offset_bottom = 140.0
+
+[node name="Rightmost Merit" type="Sprite2D" parent="." unique_id=978240390]
+position = Vector2(783.5, 293)
+texture = ExtResource("1_yial5")
+script = ExtResource("3_q7340")
+
+[node name="Button" type="Button" parent="Rightmost Merit" unique_id=1815393117]
+offset_left = -107.5
+offset_top = -143.0
+offset_right = 109.5
+offset_bottom = 147.0
+
+[connection signal="button_down" from="Leftmost Merit/Button" to="Leftmost Merit" method="_on_button_button_down"]
+[connection signal="button_down" from="Rightmost Merit/Button" to="Leftmost Merit" method="_on_button_button_down"]
+[connection signal="button_down" from="Rightmost Merit/Button" to="Rightmost Merit" method="_on_button_button_down"]

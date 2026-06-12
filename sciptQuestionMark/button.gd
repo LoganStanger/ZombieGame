@@ -1,4 +1,4 @@
-extends Sprite2D
+extends Button
 
 
 # Called when the node enters the scene tree for the first time.
@@ -10,6 +10,6 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-func _on_area_2d_area_entered(area: Area2D) -> void:
-	if area.is_in_group("loganArea") and Booyah.keycardyep:
-		get_tree().change_scene_to_file("res://Scenes/regent.tscn")
+
+func _on_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scenes/firstScene.tscn")

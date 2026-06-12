@@ -11,7 +11,6 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
-	print(Booyah.fallingHungry)
 	if Input.is_action_just_pressed("ZombieBite") and TrueDashing == false and Booyah.hungrySad == false:
 		TrueDashing = true
 		Booyah.walk_speed -= 5000
@@ -28,8 +27,8 @@ func _physics_process(delta: float) -> void:
 		TrueDashing = false
 	if Booyah.IsDashing and gudck:
 		Booyah.hunger += 100
-	if Booyah.hungrySad == true and Booyah.fallingHungry != 0:
-		Booyah.fallingHungry -= 250
+	if Booyah.hungrySad == true and Booyah.fallingHungry > 0:
+		Booyah.fallingHungry -= 400
 		var dir = Input.get_vector("ZombieLeft", "ZombieRight", "ZombieUp", "ZombieDown")
 		velocity = dir * Booyah.fallingHungry * delta
 	
