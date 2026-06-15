@@ -10,6 +10,7 @@
 [ext_resource type="Script" uid="uid://co24uwmdpv1l7" path="res://sciptQuestionMark/Keycard.gd" id="8_gxyp4"]
 [ext_resource type="Texture2D" uid="uid://ciuct187kjfia" path="res://Elevator.png" id="9_hn31x"]
 [ext_resource type="Script" uid="uid://c7u2akjn041hi" path="res://sciptQuestionMark/elevator.gd" id="10_fit5p"]
+[ext_resource type="Script" uid="uid://dvafw25shvcgl" path="res://sciptQuestionMark/RestartButton.gd" id="11_fit5p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g232c"]
 size = Vector2(64, 647)
@@ -134,5 +135,20 @@ script = ExtResource("10_fit5p")
 position = Vector2(-10.506348, 0)
 shape = SubResource("RectangleShape2D_bbrp3")
 
+[node name="Label" type="Label" parent="." unique_id=2030038700]
+z_index = 5
+offset_left = 56.0
+offset_top = 360.0
+offset_right = 293.0
+offset_bottom = 400.0
+text = "YOU LOSE!!!!!! Click to try again"
+script = ExtResource("11_fit5p")
+
+[node name="Button" type="Button" parent="Label" unique_id=583089581]
+layout_mode = 0
+offset_right = 248.0
+offset_bottom = 24.0
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="area_entered" from="Sprite2D2/Area2D" to="Sprite2D2" method="_on_area_2d_area_entered"]
+[connection signal="pressed" from="Label/Button" to="Label" method="_on_button_pressed"]

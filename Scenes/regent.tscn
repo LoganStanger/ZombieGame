@@ -29,5 +29,4 @@ offset_right = 109.5
 offset_bottom = 147.0
 
 [connection signal="button_down" from="Leftmost Merit/Button" to="Leftmost Merit" method="_on_button_button_down"]
-[connection signal="button_down" from="Rightmost Merit/Button" to="Leftmost Merit" method="_on_button_button_down"]
 [connection signal="button_down" from="Rightmost Merit/Button" to="Rightmost Merit" method="_on_button_button_down"]

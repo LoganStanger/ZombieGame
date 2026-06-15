@@ -12,4 +12,4 @@ func _process(delta: float) -> void:
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if area.is_in_group("loganArea") and Booyah.keycardyep:
-		get_tree().change_scene_to_file("res://Scenes/regent.tscn")
+		get_tree().call_deferred("change_scene_to_file", "res://Scenes/regent.tscn")
