@@ -6,11 +6,24 @@
 [ext_resource type="Texture2D" uid="uid://bjkiupg1vequ7" path="res://icon.svg" id="3_qmsdt"]
 [ext_resource type="PackedScene" uid="uid://bo3refg2iqy0h" path="res://prefabs/HumanOhMyyyGodddd.tscn" id="4_c8uak"]
 [ext_resource type="Script" uid="uid://dllb6cvtfhtwr" path="res://sciptQuestionMark/boredom_bar_temp.gd" id="4_g232c"]
+[ext_resource type="Script" uid="uid://cgypf0rnfckhp" path="res://sciptQuestionMark/level_bar_temp.gd" id="7_bbrp3"]
 [ext_resource type="Texture2D" uid="uid://djygwk53ge352" path="res://Keycard.png" id="7_qv86q"]
 [ext_resource type="Script" uid="uid://co24uwmdpv1l7" path="res://sciptQuestionMark/Keycard.gd" id="8_gxyp4"]
 [ext_resource type="Texture2D" uid="uid://ciuct187kjfia" path="res://Elevator.png" id="9_hn31x"]
 [ext_resource type="Script" uid="uid://c7u2akjn041hi" path="res://sciptQuestionMark/elevator.gd" id="10_fit5p"]
 [ext_resource type="Script" uid="uid://dvafw25shvcgl" path="res://sciptQuestionMark/RestartButton.gd" id="11_fit5p"]
+[ext_resource type="Script" uid="uid://f5kxsp4ql5fj" path="res://sciptQuestionMark/body_1.gd" id="13_in11q"]
+[ext_resource type="Script" uid="uid://cf8ds6w3wv4rp" path="res://sciptQuestionMark/body_2.gd" id="14_h6u8q"]
+[ext_resource type="Script" uid="uid://dqcl4t3rewra2" path="res://sciptQuestionMark/body_3.gd" id="15_py4b5"]
+[ext_resource type="Script" uid="uid://c7x3gbrixmgma" path="res://sciptQuestionMark/body_4.gd" id="16_guoe7"]
+[ext_resource type="Script" uid="uid://b71nk2rmq50f4" path="res://sciptQuestionMark/body_5.gd" id="17_41v44"]
+[ext_resource type="Script" uid="uid://k5iv7y4fhp3o" path="res://sciptQuestionMark/body_6.gd" id="18_ef70v"]
+[ext_resource type="Script" uid="uid://cf6aj12y61x06" path="res://sciptQuestionMark/body_7.gd" id="19_4456t"]
+[ext_resource type="Script" uid="uid://jr7tiqdr3vjg" path="res://sciptQuestionMark/body_8.gd" id="20_3ukj0"]
+[ext_resource type="Script" uid="uid://g5ct0kteba6b" path="res://sciptQuestionMark/body_9.gd" id="21_5jd7o"]
+[ext_resource type="Script" uid="uid://do7hiklpd757l" path="res://sciptQuestionMark/body_10.gd" id="22_8upfo"]
+[ext_resource type="Script" uid="uid://jeejdx342k2b" path="res://sciptQuestionMark/body_11.gd" id="23_cwnbm"]
+[ext_resource type="Script" uid="uid://bcxld4sqg7wab" path="res://sciptQuestionMark/body_12.gd" id="24_8hler"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g232c"]
 size = Vector2(64, 647)
@@ -20,6 +33,9 @@ size = Vector2(696, 48)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bbrp3"]
 size = Vector2(189.11584, 126.07721)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_in11q"]
+size = Vector2(55, 208)
 
 [node name="GameManager" type="Node2D" unique_id=2083841095]
 script = ExtResource("1_bvqnw")
@@ -77,7 +93,7 @@ texture = ExtResource("3_qmsdt")
 shape = SubResource("RectangleShape2D_g232c")
 
 [node name="CharacterBody2D" parent="." unique_id=184723477 instance=ExtResource("2_j8pi6")]
-position = Vector2(688, 288)
+position = Vector2(604, 282)
 
 [node name="CharacterBody2D3" parent="." unique_id=446698375 instance=ExtResource("4_c8uak")]
 position = Vector2(456, 120)
@@ -111,6 +127,15 @@ offset_right = 236.0
 offset_bottom = 135.0
 text = "Boredom :( = "
 script = ExtResource("4_g232c")
+
+[node name="LevelBarTemp" type="Label" parent="." unique_id=1957414686]
+z_index = 5
+offset_left = 152.0
+offset_top = 152.0
+offset_right = 255.0
+offset_bottom = 175.0
+text = "Boredom :( = "
+script = ExtResource("7_bbrp3")
 
 [node name="Timer" type="Timer" parent="." unique_id=985129448]
 wait_time = 0.5
@@ -149,6 +174,195 @@ script = ExtResource("11_fit5p")
 layout_mode = 0
 offset_right = 248.0
 offset_bottom = 24.0
+
+[node name="Label2" type="Label" parent="." unique_id=1125685745]
+z_index = 4
+offset_left = 64.0
+offset_top = 400.0
+offset_right = 295.0
+offset_bottom = 527.0
+text = "Left click = bite
+Hold space = sprint
+Make it past level 10 to win
+Lose all hunger to lose
+Eat people to get hunger back"
+
+[node name="Body1" type="StaticBody2D" parent="." unique_id=1441105412]
+position = Vector2(545, 141)
+script = ExtResource("13_in11q")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Body1" unique_id=432634796]
+z_index = 2
+scale = Vector2(0.43749988, 1.625)
+texture = ExtResource("3_qmsdt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Body1" unique_id=536283914]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_in11q")
+
+[node name="Body2" type="StaticBody2D" parent="." unique_id=1745353288]
+position = Vector2(729, 575)
+script = ExtResource("14_h6u8q")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Body2" unique_id=1487824156]
+z_index = 2
+scale = Vector2(0.43749988, 1.625)
+texture = ExtResource("3_qmsdt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Body2" unique_id=685333295]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_in11q")
+
+[node name="Body3" type="StaticBody2D" parent="." unique_id=141096121]
+position = Vector2(794, 371.00003)
+rotation = -1.5882496
+script = ExtResource("15_py4b5")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Body3" unique_id=1792908441]
+z_index = 2
+scale = Vector2(0.43749988, 1.625)
+texture = ExtResource("3_qmsdt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Body3" unique_id=923186818]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_in11q")
+
+[node name="Body4" type="StaticBody2D" parent="." unique_id=1655847639]
+position = Vector2(1074, 397.00003)
+rotation = -1.9914206
+script = ExtResource("16_guoe7")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Body4" unique_id=2087355945]
+z_index = 2
+scale = Vector2(0.43749988, 1.625)
+texture = ExtResource("3_qmsdt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Body4" unique_id=800299896]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_in11q")
+
+[node name="Body5" type="StaticBody2D" parent="." unique_id=442294206]
+position = Vector2(466.99994, 407.99997)
+rotation = 1.6179202
+script = ExtResource("17_41v44")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Body5" unique_id=560249222]
+z_index = 2
+scale = Vector2(0.43749988, 1.625)
+texture = ExtResource("3_qmsdt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Body5" unique_id=1856643605]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_in11q")
+
+[node name="Body6" type="StaticBody2D" parent="." unique_id=762585718]
+position = Vector2(862, 129)
+script = ExtResource("18_ef70v")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Body6" unique_id=644194889]
+z_index = 2
+scale = Vector2(0.43749988, 1.625)
+texture = ExtResource("3_qmsdt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Body6" unique_id=125899323]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_in11q")
+
+[node name="Body7" type="StaticBody2D" parent="." unique_id=930769205]
+position = Vector2(458.99997, 242)
+rotation = 1.3683381
+script = ExtResource("19_4456t")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Body7" unique_id=1625394230]
+z_index = 2
+scale = Vector2(0.43749988, 1.625)
+texture = ExtResource("3_qmsdt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Body7" unique_id=844264410]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_in11q")
+
+[node name="Body8" type="StaticBody2D" parent="." unique_id=963101054]
+position = Vector2(638, 384)
+rotation = 1.3683381
+script = ExtResource("20_3ukj0")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Body8" unique_id=1123489029]
+z_index = 2
+scale = Vector2(0.43749988, 1.625)
+texture = ExtResource("3_qmsdt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Body8" unique_id=1707843837]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_in11q")
+
+[node name="Body9" type="StaticBody2D" parent="." unique_id=721599584]
+position = Vector2(717.00006, 191.00002)
+rotation = 2.2392573
+script = ExtResource("21_5jd7o")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Body9" unique_id=313445122]
+z_index = 2
+scale = Vector2(0.43749988, 1.625)
+texture = ExtResource("3_qmsdt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Body9" unique_id=1965406651]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_in11q")
+
+[node name="Body10" type="StaticBody2D" parent="." unique_id=1093606831]
+position = Vector2(561, 423)
+rotation = -0.12566371
+script = ExtResource("22_8upfo")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Body10" unique_id=1353437804]
+z_index = 2
+scale = Vector2(0.43749988, 1.625)
+texture = ExtResource("3_qmsdt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Body10" unique_id=1358814964]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_in11q")
+
+[node name="Body11" type="StaticBody2D" parent="." unique_id=195351018]
+position = Vector2(989.9999, 222.99998)
+rotation = -1.4940019
+script = ExtResource("23_cwnbm")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Body11" unique_id=315133153]
+z_index = 2
+scale = Vector2(0.43749988, 1.625)
+texture = ExtResource("3_qmsdt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Body11" unique_id=302146500]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_in11q")
+
+[node name="Body12" type="StaticBody2D" parent="." unique_id=918101924]
+position = Vector2(644, 226.99998)
+rotation = -1.4940019
+script = ExtResource("24_8hler")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Body12" unique_id=302807308]
+z_index = 2
+scale = Vector2(0.43749988, 1.625)
+texture = ExtResource("3_qmsdt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Body12" unique_id=2114524007]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_in11q")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="area_entered" from="Sprite2D2/Area2D" to="Sprite2D2" method="_on_area_2d_area_entered"]

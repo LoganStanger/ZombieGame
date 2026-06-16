@@ -28,5 +28,15 @@ offset_top = -143.0
 offset_right = 109.5
 offset_bottom = 147.0
 
+[node name="Label" type="Label" parent="." unique_id=2014761428]
+offset_left = -42.0
+offset_top = 475.0
+offset_right = 1143.0
+offset_bottom = 611.0
+theme_override_font_sizes/font_size = 24
+text = "Hi! Later in development I will add powerups to these boxes, but for now they are blank :(
+Just choose one and it'll start the next level"
+horizontal_alignment = 1
+
 [connection signal="button_down" from="Leftmost Merit/Button" to="Leftmost Merit" method="_on_button_button_down"]
 [connection signal="button_down" from="Rightmost Merit/Button" to="Rightmost Merit" method="_on_button_button_down"]
