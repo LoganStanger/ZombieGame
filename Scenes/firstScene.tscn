@@ -136,6 +136,7 @@ position = Vector2(-10.506348, 0)
 shape = SubResource("RectangleShape2D_bbrp3")
 
 [node name="Label" type="Label" parent="." unique_id=2030038700]
+show_behind_parent = true
 z_index = 5
 offset_left = 56.0
 offset_top = 360.0

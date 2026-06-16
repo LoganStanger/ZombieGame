@@ -4,9 +4,11 @@ extends Node2D
 func _ready() -> void:
 	Booyah.keycardyep = false
 	Booyah.population = 5
-	Booyah.level = 1
 	Booyah.hunger = 200
 	Booyah.boredom = 100
+	Booyah.hungrySad = false
+	Booyah.IsDashing = false
+	Booyah.chancekeycard = 99
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

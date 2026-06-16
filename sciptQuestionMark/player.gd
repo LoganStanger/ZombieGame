@@ -3,16 +3,14 @@ extends CharacterBody2D
 
 var gudck = false
 var IsSprinting: bool = false
-var TrueDashing: bool = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	Booyah.fallingHungry = Booyah.walk_speed
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
-	if Input.is_action_just_pressed("ZombieBite") and TrueDashing == false and Booyah.hungrySad == false:
-		TrueDashing = true
+	if Input.is_action_just_pressed("ZombieBite") and Booyah.TrueDashing == false and Booyah.hungrySad == false:
+		Booyah.TrueDashing = true
 		Booyah.walk_speed -= 5000
 		Booyah.run_speed -= 5000
 		await get_tree().create_timer(0.2).timeout
@@ -24,7 +22,7 @@ func _physics_process(delta: float) -> void:
 		Booyah.walk_speed -= 45000
 		Booyah.run_speed -= 45000
 		Booyah.IsDashing = false
-		TrueDashing = false
+		Booyah.TrueDashing = false
 	if Booyah.IsDashing and gudck:
 		Booyah.hunger += 100
 	if Booyah.hungrySad == true and Booyah.fallingHungry > 0:

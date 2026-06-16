@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cgxfd3l50f785"]
+
+[ext_resource type="Script" uid="uid://o7r2qr3ojnp1" path="res://sciptQuestionMark/EndingBytton.gd" id="1_2v88f"]
+[ext_resource type="Texture2D" uid="uid://d1xd20wyjctvc" path="res://Kentucky.png" id="2_vep41"]
+
+[node name="Node2D" type="Node2D" unique_id=1153925544]
+
+[node name="Button" type="Button" parent="." unique_id=1031551848]
+offset_left = 648.0
+offset_top = 585.0
+offset_right = 1043.0
+offset_bottom = 636.0
+script = ExtResource("1_2v88f")
+
+[node name="Kentucky" type="Sprite2D" parent="." unique_id=1658950495]
+position = Vector2(574.00006, 323.125)
+scale = Vector2(1.0034722, 1.0034722)
+texture = ExtResource("2_vep41")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

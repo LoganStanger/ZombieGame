@@ -12,3 +12,4 @@ var chancekeycard = 99
 var hungrySad = false
 var fallingHungry = 0
 var level = 1
+var TrueDashing = false
