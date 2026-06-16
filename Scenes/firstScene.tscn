@@ -93,7 +93,7 @@ texture = ExtResource("3_qmsdt")
 shape = SubResource("RectangleShape2D_g232c")
 
 [node name="CharacterBody2D" parent="." unique_id=184723477 instance=ExtResource("2_j8pi6")]
-position = Vector2(604, 282)
+position = Vector2(453, 328)
 
 [node name="CharacterBody2D3" parent="." unique_id=446698375 instance=ExtResource("4_c8uak")]
 position = Vector2(456, 120)
