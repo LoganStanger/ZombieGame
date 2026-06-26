@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 var gudck = false
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 		if Booyah.IsDashing and gudck:
 			if randi_range(1,100) > Booyah.chancekeycard:
 				Booyah.keycardyep = true

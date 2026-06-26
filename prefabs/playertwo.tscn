@@ -12,6 +12,7 @@ size = Vector2(50, 42)
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=184723477]
 position = Vector2(45, 32)
+collision_mask = 3
 script = ExtResource("1_wrvgs")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=17858659]
@@ -27,6 +28,7 @@ shape = SubResource("RectangleShape2D_wrvgs")
 shape = SubResource("RectangleShape2D_yoka8")
 
 [node name="Sprite2D2" type="Sprite2D" parent="." unique_id=563522976]
+visible = false
 z_index = 4
 position = Vector2(127, 85.00001)
 scale = Vector2(4.1239476, 4.123946)
