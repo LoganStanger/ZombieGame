@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://drmbo2xonse6y"]
+
+[ext_resource type="Texture2D" uid="uid://bjkiupg1vequ7" path="res://icon.svg" id="1_v1qfn"]
+[ext_resource type="PackedScene" uid="uid://cgk3eulw81qgo" path="res://prefabs/robot.tscn" id="2_hh5uf"]
+[ext_resource type="PackedScene" uid="uid://djt5pbq7pbexk" path="res://prefabs/playertwo.tscn" id="3_6whob"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6whob"]
+texture = ExtResource("1_v1qfn")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
+
+[sub_resource type="TileSet" id="TileSet_u7krg"]
+tile_size = Vector2i(128, 128)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_6whob")
+
+[node name="Node2D" type="Node2D" unique_id=928845221]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=8938476]
+modulate = Color(0.99999994, 0.45069087, 0.11175836, 1)
+tile_map_data = PackedByteArray(0, 0, 6, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+tile_set = SubResource("TileSet_u7krg")
+
+[node name="Robot" parent="." unique_id=1850259403 instance=ExtResource("2_hh5uf")]
+position = Vector2(622, 371)
+
+[node name="CharacterBody2D2" parent="." unique_id=184723477 instance=ExtResource("3_6whob")]
+position = Vector2(484, 266)

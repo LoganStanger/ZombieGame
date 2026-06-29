@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 const speed = 20
-@export var player: CharacterBody2D
+var player = preload("res://prefabs/playertwo.tscn")
 @onready var nav_agent := $NavigationAgent2D as NavigationAgent2D
 
 func _physics_process(_delta: float) -> void:
@@ -10,7 +10,7 @@ func _physics_process(_delta: float) -> void:
 	move_and_slide()
 
 func makepath() -> void:
-	nav_agent.target_position = player.global_position
+	nav_agent.target_position = $"../CharacterBody2D2".global_position
 
 func _on_timer_timeout() -> void:
 	makepath()

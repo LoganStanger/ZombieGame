@@ -21,8 +21,10 @@ texture = ExtResource("2_mvkht")
 shape = SubResource("CircleShape2D_ld7d3")
 
 [node name="Timer" type="Timer" parent="." unique_id=1748331261]
+autostart = true
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1420517478]
 debug_enabled = true
+debug_path_custom_color = Color(0.80029035, 0, 0.060205393, 1)
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
