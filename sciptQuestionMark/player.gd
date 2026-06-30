@@ -25,7 +25,7 @@ func _physics_process(delta: float) -> void:
 		Booyah.TrueDashing = false
 	if Booyah.IsDashing and gudck:
 		Booyah.hunger += 100
-	if Booyah.hungrySad == true and Booyah.fallingHungry > 0:
+	if Booyah.hungrySad == true and Booyah.fallingHungry > 0 and Booyah.NoMove == false:
 		Booyah.fallingHungry -= 400
 		var dir = Input.get_vector("ZombieLeft", "ZombieRight", "ZombieUp", "ZombieDown")
 		velocity = dir * Booyah.fallingHungry * delta
@@ -37,13 +37,21 @@ func _physics_process(delta: float) -> void:
 		IsSprinting = false
 		Booyah.hungerSpeed -= 1
 		
-	if IsSprinting == false and Booyah.hungrySad == false:
+	if IsSprinting == false and Booyah.hungrySad == false and Booyah.NoMove == false:
 		var dir = Input.get_vector("ZombieLeft", "ZombieRight", "ZombieUp", "ZombieDown")
 		velocity = dir * Booyah.walk_speed * delta
-	if IsSprinting == true and Booyah.hungrySad == false:
+	if IsSprinting == true and Booyah.hungrySad == false and Booyah.NoMove == false:
 		var dir = Input.get_vector("ZombieLeft", "ZombieRight", "ZombieUp", "ZombieDown")
 		velocity = dir * Booyah.run_speed * delta
+		
+	if Input.is_action_just_pressed("ZombieGangnamStyle"):
+		Booyah.NoMove = true
 	
+	if Input.is_action_just_released("ZombieGangnamStyle"):
+		Booyah.NoMove = false
+	
+	if Booyah.NoMove:
+		
 	
 	move_and_slide()
 

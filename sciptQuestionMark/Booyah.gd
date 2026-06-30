@@ -13,3 +13,7 @@ var hungrySad = false
 var fallingHungry = 0
 var level = 1
 var TrueDashing = false
+var RobotSpawn = 1
+var DroneSpawn = 1
+var ExplodeSpawn = 1
+var NoMove = false
