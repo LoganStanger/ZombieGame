@@ -4,7 +4,6 @@
 [ext_resource type="PackedScene" uid="uid://djt5pbq7pbexk" path="res://prefabs/playertwo.tscn" id="2_j8pi6"]
 [ext_resource type="Script" uid="uid://dnwfaagu6yfp1" path="res://sciptQuestionMark/label.gd" id="3_g232c"]
 [ext_resource type="PackedScene" uid="uid://bo3refg2iqy0h" path="res://prefabs/HumanOhMyyyGodddd.tscn" id="4_c8uak"]
-[ext_resource type="Script" uid="uid://dllb6cvtfhtwr" path="res://sciptQuestionMark/boredom_bar_temp.gd" id="4_g232c"]
 [ext_resource type="Script" uid="uid://cgypf0rnfckhp" path="res://sciptQuestionMark/level_bar_temp.gd" id="7_bbrp3"]
 [ext_resource type="Texture2D" uid="uid://djygwk53ge352" path="res://Keycard.png" id="7_qv86q"]
 [ext_resource type="Script" uid="uid://co24uwmdpv1l7" path="res://sciptQuestionMark/Keycard.gd" id="8_gxyp4"]
@@ -13,6 +12,11 @@
 [ext_resource type="Script" uid="uid://dvafw25shvcgl" path="res://sciptQuestionMark/RestartButton.gd" id="11_fit5p"]
 [ext_resource type="Texture2D" uid="uid://cko5nwx6rrlq3" path="res://New Piskel-1.png.png" id="13_in11q"]
 [ext_resource type="PackedScene" uid="uid://cgk3eulw81qgo" path="res://prefabs/robot.tscn" id="25_3ukj0"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_bbrp3"]
+vertices = PackedVector2Array(856, 168, 856, 472, 808, 424, 808, 216, 600, 472, 600, 424, 600, 600, 552, 552, 552, 216, 600, 216, 168, 600, 344, 552, 168, 168, 344, 216, 168, 424, 296, 424, 296, 216, 168, 216)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(2, 1, 4, 5), PackedInt32Array(4, 6, 7, 8), PackedInt32Array(5, 4, 8), PackedInt32Array(9, 5, 8), PackedInt32Array(7, 6, 10, 11), PackedInt32Array(12, 0, 3, 9), PackedInt32Array(12, 9, 8), PackedInt32Array(12, 8, 13), PackedInt32Array(11, 10, 14, 15), PackedInt32Array(13, 11, 15, 16), PackedInt32Array(12, 13, 16), PackedInt32Array(12, 16, 17)])
+agent_radius = 40.0
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_8hp58"]
 vertices = PackedVector2Array(64, 64, -64, 64, -64, -64, 64, -64)
@@ -40,7 +44,10 @@ size = Vector2(189.11584, 126.07721)
 [node name="GameManager" type="Node2D" unique_id=2083841095]
 script = ExtResource("1_bvqnw")
 
-[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1975548686]
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=474971992]
+navigation_polygon = SubResource("NavigationPolygon_bbrp3")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="NavigationRegion2D" unique_id=1975548686]
 tile_map_data = PackedByteArray("AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAUAAAAAAAAAAAABAAUAAAAAAAAAAAACAAUAAAAAAAAAAAADAAUAAAAAAAAAAAAEAAUAAAAAAAAAAAAGAAUAAAAAAAAAAAAFAAUAAAAAAAAAAAAFAAQAAAAAAAAAAAABAAAAAAAAAAAAAAACAAAAAAAAAAAAAAADAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAFAAAAAAAAAAAAAAAGAAAAAAAAAAAAAAAHAAAAAAAAAAAAAAAHAAEAAAAAAAAAAAAHAAIAAAAAAAAAAAAHAAMAAAAAAAAAAAAHAAQAAAAAAAAAAAAGAAQAAAAAAAAAAAADAAMAAAAAAAAAAAADAAIAAAAAAAAAAAAFAAIAAAAAAAAAAAABAAIAAAAAAAAAAAABAAMAAAABAAAAAAABAAQAAAABAAAAAAACAAQAAAABAAAAAAACAAMAAAABAAAAAAACAAIAAAABAAAAAAACAAEAAAABAAAAAAABAAEAAAABAAAAAAAEAAEAAAABAAAAAAAFAAEAAAABAAAAAAAGAAEAAAABAAAAAAADAAEAAAABAAAAAAAEAAIAAAABAAAAAAAEAAMAAAABAAAAAAAEAAQAAAABAAAAAAADAAQAAAABAAAAAAAFAAMAAAABAAAAAAAGAAMAAAABAAAAAAAGAAIAAAABAAAAAAA=")
 tile_set = SubResource("TileSet_3rxv8")
 
@@ -71,15 +78,6 @@ offset_right = 236.0
 offset_bottom = 87.0
 text = "Hunger!!!!!! = "
 script = ExtResource("3_g232c")
-
-[node name="BoredomBarTemp" type="Label" parent="." unique_id=1411340435]
-z_index = 5
-offset_left = 152.0
-offset_top = 112.0
-offset_right = 236.0
-offset_bottom = 135.0
-text = "Boredom :( = "
-script = ExtResource("4_g232c")
 
 [node name="LevelBarTemp" type="Label" parent="." unique_id=1957414686]
 z_index = 5
