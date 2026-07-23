@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dho5e7m4rwqfn"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xmm7c"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6u2qo"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=567769464]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=509427261]
+sprite_frames = SubResource("SpriteFrames_xmm7c")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1924361301]
+
+[node name="Timer" type="Timer" parent="." unique_id=178013911]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1685836354]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=273013694]
+shape = SubResource("CircleShape2D_6u2qo")

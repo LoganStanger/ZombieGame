@@ -3,8 +3,8 @@
 [ext_resource type="Script" uid="uid://cdgog7huwjabs" path="res://sciptQuestionMark/robot.gd" id="1_ld7d3"]
 [ext_resource type="Texture2D" uid="uid://8jqhtrxbjho1" path="res://HumanHuman.png" id="2_mvkht"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ld7d3"]
-size = Vector2(68, 56)
+[sub_resource type="CircleShape2D" id="CircleShape2D_ld7d3"]
+radius = 30.066593
 
 [node name="Robot" type="CharacterBody2D" unique_id=1850259403]
 motion_mode = 1
@@ -16,16 +16,18 @@ script = ExtResource("1_ld7d3")
 scale = Vector2(0.7151899, 0.7151899)
 texture = ExtResource("2_mvkht")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1657763709]
-shape = SubResource("RectangleShape2D_ld7d3")
-
 [node name="Timer" type="Timer" parent="." unique_id=1748331261]
-wait_time = 0.135
+wait_time = 0.2
 autostart = true
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1420517478]
-debug_enabled = true
+simplify_path = true
 debug_use_custom = true
 debug_path_custom_color = Color(0.46881825, 0.41444546, 0.34689346, 1)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1156097505]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1657763709]
+shape = SubResource("CircleShape2D_ld7d3")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

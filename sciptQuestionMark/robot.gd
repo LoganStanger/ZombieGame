@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const speed = 100
+const speed = 250
 @export var player: Node2D
 #var player = preload("res://prefabs/playertwo.tscn")
 @onready var nav_agent := $NavigationAgent2D as NavigationAgent2D
