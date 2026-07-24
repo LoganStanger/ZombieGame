@@ -1,31 +1,128 @@
 [gd_scene format=3 uid="uid://djt5pbq7pbexk"]
 
 [ext_resource type="Script" uid="uid://bo8752rwqgeyg" path="res://sciptQuestionMark/player.gd" id="1_wrvgs"]
-[ext_resource type="Texture2D" uid="uid://b3g15u6u4vyfu" path="res://ZombieZombie.png" id="2_wrvgs"]
+[ext_resource type="Texture2D" uid="uid://cua1itgjtddy0" path="res://ZombieBiting.png" id="2_0ice5"]
+[ext_resource type="Texture2D" uid="uid://b3r8fcrtktequ" path="res://ZombieIdle.png" id="2_ihcol"]
+[ext_resource type="Texture2D" uid="uid://cs6uav3uwh8tq" path="res://New Piskel.png" id="2_yoka8"]
 [ext_resource type="Texture2D" uid="uid://dkkdjc66low4" path="res://Spotlight-removebg-preview.png" id="3_yoka8"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_wrvgs"]
-size = Vector2(48, 40)
+[sub_resource type="AtlasTexture" id="AtlasTexture_516ys"]
+atlas = ExtResource("2_0ice5")
+region = Rect2(0, 0, 32, 32)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_yoka8"]
-size = Vector2(50, 42)
+[sub_resource type="AtlasTexture" id="AtlasTexture_4d3ko"]
+atlas = ExtResource("2_0ice5")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q13ft"]
+atlas = ExtResource("2_0ice5")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5wpur"]
+atlas = ExtResource("2_0ice5")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wbkva"]
+atlas = ExtResource("2_ihcol")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g5igy"]
+atlas = ExtResource("2_ihcol")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4wfew"]
+atlas = ExtResource("2_ihcol")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u8ana"]
+atlas = ExtResource("2_ihcol")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ihcol"]
+atlas = ExtResource("2_yoka8")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0ice5"]
+atlas = ExtResource("2_yoka8")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wbkva"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_0ice5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_516ys")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4d3ko")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q13ft")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5wpur")
+}],
+"loop": true,
+"name": &"Emoting",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wbkva")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g5igy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4wfew")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u8ana")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ihcol")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0ice5")
+}],
+"loop": true,
+"name": &"Walking",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g5igy"]
+radius = 20.09975
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4wfew"]
+radius = 24.0
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=184723477]
 position = Vector2(45, 32)
 collision_mask = 3
+motion_mode = 1
+wall_min_slide_angle = 0.10471976
 script = ExtResource("1_wrvgs")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=17858659]
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_wrvgs")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=915443964]
+position = Vector2(4.7683716e-07, -4.7683716e-07)
+scale = Vector2(1.390625, 1.390625)
+sprite_frames = SubResource("SpriteFrames_wbkva")
+animation = &"Emoting"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=430608491]
-shape = SubResource("RectangleShape2D_wrvgs")
+shape = SubResource("CircleShape2D_g5igy")
 
 [node name="LoganArea" type="Area2D" parent="." unique_id=1417049426 groups=["loganArea"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LoganArea" unique_id=76233094]
-shape = SubResource("RectangleShape2D_yoka8")
+shape = SubResource("CircleShape2D_4wfew")
 
 [node name="Sprite2D2" type="Sprite2D" parent="." unique_id=563522976]
 visible = false

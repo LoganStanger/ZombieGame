@@ -1,21 +1,49 @@
 [gd_scene format=3 uid="uid://bx0paf6l1tr8i"]
 
+[ext_resource type="Texture2D" uid="uid://cs6uav3uwh8tq" path="res://New Piskel.png" id="1_q7340"]
 [ext_resource type="Texture2D" uid="uid://doco3v6qvg5gp" path="res://MeritPlain.png" id="1_yial5"]
 [ext_resource type="Script" uid="uid://c3sesoih6ji0l" path="res://sciptQuestionMark/leftmost_merit.gd" id="2_j838w"]
 [ext_resource type="Script" uid="uid://b707db7coii4x" path="res://sciptQuestionMark/rightmost_merit.gd" id="3_q7340"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_lo5r5"]
+atlas = ExtResource("1_q7340")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jvx13"]
+atlas = ExtResource("1_q7340")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_puktk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lo5r5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jvx13")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
 [node name="Node2D" type="Node2D" unique_id=49367222]
 
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1401422641]
+sprite_frames = SubResource("SpriteFrames_puktk")
+animation = &"new_animation"
+
+[node name="Button" type="Button" parent="AnimatedSprite2D" unique_id=1684169795]
+offset_left = 290.0
+offset_top = 153.0
+offset_right = 516.0
+offset_bottom = 433.0
+
 [node name="Leftmost Merit" type="Sprite2D" parent="." unique_id=1044441130]
-position = Vector2(404.5, 293)
+z_index = 13
+position = Vector2(405, 294)
 texture = ExtResource("1_yial5")
 script = ExtResource("2_j838w")
-
-[node name="Button" type="Button" parent="Leftmost Merit" unique_id=1684169795]
-offset_left = -114.5
-offset_top = -140.0
-offset_right = 111.5
-offset_bottom = 140.0
 
 [node name="Rightmost Merit" type="Sprite2D" parent="." unique_id=978240390]
 position = Vector2(783.5, 293)
@@ -38,5 +66,5 @@ text = "Hi! Later in development I will add powerups to these boxes, but for now
 Just choose one and it'll start the next level"
 horizontal_alignment = 1
 
-[connection signal="button_down" from="Leftmost Merit/Button" to="Leftmost Merit" method="_on_button_button_down"]
+[connection signal="button_down" from="AnimatedSprite2D/Button" to="Leftmost Merit" method="_on_button_button_down"]
 [connection signal="button_down" from="Rightmost Merit/Button" to="Rightmost Merit" method="_on_button_button_down"]

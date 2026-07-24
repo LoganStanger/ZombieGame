@@ -6,6 +6,9 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_ld7d3"]
 radius = 30.066593
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_mvkht"]
+radius = 14.035668
+
 [node name="Robot" type="CharacterBody2D" unique_id=1850259403]
 motion_mode = 1
 wall_min_slide_angle = 0.0
@@ -17,7 +20,7 @@ scale = Vector2(0.7151899, 0.7151899)
 texture = ExtResource("2_mvkht")
 
 [node name="Timer" type="Timer" parent="." unique_id=1748331261]
-wait_time = 0.2
+wait_time = 0.1
 autostart = true
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1420517478]
@@ -29,5 +32,8 @@ debug_path_custom_color = Color(0.46881825, 0.41444546, 0.34689346, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1657763709]
 shape = SubResource("CircleShape2D_ld7d3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1086024890]
+shape = SubResource("CircleShape2D_mvkht")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

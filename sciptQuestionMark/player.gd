@@ -1,5 +1,5 @@
 extends CharacterBody2D
-
+@onready var animated_sprite_2d = $AnimatedSprite2D
 
 var gudck = false
 var IsSprinting: bool = false
@@ -46,10 +46,13 @@ func _physics_process(delta: float) -> void:
 		IsSprinting = false
 		Booyah.hungerSpeed -= 1
 	
-	
+	if velocity == Vector2(0,0):
+			animated_sprite_2d.play("Idle")
 	if IsSprinting == false and Booyah.NoMove == false:
 		var dir = Input.get_vector("ZombieLeft", "ZombieRight", "ZombieUp", "ZombieDown")
 		velocity = dir * Booyah.walk_speed * delta
+		if velocity != Vector2(0,0):
+			animated_sprite_2d.play("Walking")
 	if IsSprinting == true and Booyah.NoMove == false:
 		var dir = Input.get_vector("ZombieLeft", "ZombieRight", "ZombieUp", "ZombieDown")
 		velocity = dir * Booyah.run_speed * delta
@@ -62,6 +65,8 @@ func _physics_process(delta: float) -> void:
 	
 	if Booyah.hunger == 0:
 		Booyah.NoMove = true
+	else:
+		Booyah.NoMove = false
 	
 	move_and_slide()
 
