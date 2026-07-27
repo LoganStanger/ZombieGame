@@ -3,6 +3,7 @@ extends CharacterBody2D
 
 var gudck = false
 var IsSprinting: bool = false
+var Emoting = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	Booyah.fallingHungry = Booyah.walk_speed
@@ -46,23 +47,30 @@ func _physics_process(delta: float) -> void:
 		IsSprinting = false
 		Booyah.hungerSpeed -= 1
 	
-	if velocity == Vector2(0,0):
+	if velocity == Vector2(0,0) and Booyah.NoMove == false:
 			animated_sprite_2d.play("Idle")
 	if IsSprinting == false and Booyah.NoMove == false:
 		var dir = Input.get_vector("ZombieLeft", "ZombieRight", "ZombieUp", "ZombieDown")
 		velocity = dir * Booyah.walk_speed * delta
-		if velocity != Vector2(0,0):
+		if velocity != Vector2(0,0) and Emoting == false:
 			animated_sprite_2d.play("Walking")
 	if IsSprinting == true and Booyah.NoMove == false:
 		var dir = Input.get_vector("ZombieLeft", "ZombieRight", "ZombieUp", "ZombieDown")
 		velocity = dir * Booyah.run_speed * delta
+		if velocity != Vector2(0,0) and Emoting == false:
+			animated_sprite_2d.play("Walking")
 		
 	if Input.is_action_just_pressed("ZombieGangnamStyle"):
+		Emoting = true
 		Booyah.NoMove = true
 	
 	if Input.is_action_just_released("ZombieGangnamStyle"):
+		Emoting = false
 		Booyah.NoMove = false
 	
+	if Emoting == true:
+		animated_sprite_2d.play("Emoting")
+		
 	if Booyah.hunger == 0:
 		Booyah.NoMove = true
 	else:
