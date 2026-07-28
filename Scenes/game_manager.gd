@@ -8,7 +8,6 @@ func _ready() -> void:
 	Booyah.boredom = 100
 	Booyah.IsDashing = false
 	Booyah.chancekeycard = 99
-	Booyah.NoMove = false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
@@ -17,8 +16,7 @@ func _process(_delta: float) -> void:
 		#if hunger drops below zero, brings it back up to zero and makes fail state.
 	if Booyah.hunger < 0:
 		Booyah.hunger = 0
-	if Booyah.hunger == 0:
-		Booyah.NoMove = true
+	
 
 #code to decrease hunger and boredom
 func _on_timer_timeout() -> void:

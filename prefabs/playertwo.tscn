@@ -1,26 +1,38 @@
 [gd_scene format=3 uid="uid://djt5pbq7pbexk"]
 
 [ext_resource type="Script" uid="uid://bo8752rwqgeyg" path="res://sciptQuestionMark/player.gd" id="1_wrvgs"]
-[ext_resource type="Texture2D" uid="uid://cua1itgjtddy0" path="res://ZombieBiting.png" id="2_0ice5"]
 [ext_resource type="Texture2D" uid="uid://b3r8fcrtktequ" path="res://ZombieIdle.png" id="2_ihcol"]
 [ext_resource type="Texture2D" uid="uid://cs6uav3uwh8tq" path="res://New Piskel.png" id="2_yoka8"]
 [ext_resource type="Texture2D" uid="uid://dkkdjc66low4" path="res://Spotlight-removebg-preview.png" id="3_yoka8"]
+[ext_resource type="Texture2D" uid="uid://b0f0weabsney8" path="res://ZombieSpritesheet.png" id="4_0ice5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_516ys"]
-atlas = ExtResource("2_0ice5")
+atlas = ExtResource("4_0ice5")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4d3ko"]
-atlas = ExtResource("2_0ice5")
+atlas = ExtResource("4_0ice5")
 region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_q13ft"]
-atlas = ExtResource("2_0ice5")
-region = Rect2(0, 32, 32, 32)
+atlas = ExtResource("4_0ice5")
+region = Rect2(64, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5wpur"]
-atlas = ExtResource("2_0ice5")
+atlas = ExtResource("4_0ice5")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0kddk"]
+atlas = ExtResource("4_0ice5")
 region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q0cg3"]
+atlas = ExtResource("4_0ice5")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nfudx"]
+atlas = ExtResource("4_0ice5")
+region = Rect2(0, 64, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wbkva"]
 atlas = ExtResource("2_ihcol")
@@ -60,10 +72,19 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_5wpur")
+}, {
+"duration": 1.5,
+"texture": SubResource("AtlasTexture_0kddk")
+}, {
+"duration": 1.5,
+"texture": SubResource("AtlasTexture_q0cg3")
+}, {
+"duration": 1.5,
+"texture": SubResource("AtlasTexture_nfudx")
 }],
 "loop": true,
-"name": &"Emoting",
-"speed": 5.0
+"name": &"Biting",
+"speed": 15.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -111,7 +132,7 @@ script = ExtResource("1_wrvgs")
 position = Vector2(4.7683716e-07, -4.7683716e-07)
 scale = Vector2(1.390625, 1.390625)
 sprite_frames = SubResource("SpriteFrames_wbkva")
-animation = &"Emoting"
+animation = &"Biting"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=430608491]
 shape = SubResource("CircleShape2D_g5igy")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cua1itgjtddy0"
-path="res://.godot/imported/ZombieBiting.png-e24bbd4169b7466f61d96ab69674248a.ctex"
+uid="uid://b0f0weabsney8"
+path="res://.godot/imported/ZombieSpritesheet.png-1cf0da6967a9c35e21a04175cacde486.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ZombieBiting.png"
-dest_files=["res://.godot/imported/ZombieBiting.png-e24bbd4169b7466f61d96ab69674248a.ctex"]
+source_file="res://ZombieSpritesheet.png"
+dest_files=["res://.godot/imported/ZombieSpritesheet.png-1cf0da6967a9c35e21a04175cacde486.ctex"]
 
 [params]
 

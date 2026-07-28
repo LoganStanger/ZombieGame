@@ -1,19 +1,72 @@
 [gd_scene format=3 uid="uid://dho5e7m4rwqfn"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_xmm7c"]
+[ext_resource type="Texture2D" uid="uid://by10yqp760xuu" path="res://DroneSheet.png" id="1_6u2qo"]
+[ext_resource type="Script" uid="uid://jjhd75en2dvs" path="res://sciptQuestionMark/drone.gd" id="1_8k5ei"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6u2qo"]
+radius = 21.023796
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8k5ei"]
+atlas = ExtResource("1_6u2qo")
+region = Rect2(0, 0, 34, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n7qkq"]
+atlas = ExtResource("1_6u2qo")
+region = Rect2(34, 0, 34, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ulkrd"]
+atlas = ExtResource("1_6u2qo")
+region = Rect2(0, 34, 34, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hby23"]
+atlas = ExtResource("1_6u2qo")
+region = Rect2(34, 34, 34, 34)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xmm7c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8k5ei")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n7qkq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ulkrd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hby23")
+}],
+"loop": true,
+"name": &"Moving",
+"speed": 20.0
+}]
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=567769464]
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=509427261]
-sprite_frames = SubResource("SpriteFrames_xmm7c")
-
-[node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1924361301]
-
-[node name="Timer" type="Timer" parent="." unique_id=178013911]
+position = Vector2(658, 377)
+motion_mode = 1
+script = ExtResource("1_8k5ei")
+metadata/_edit_group_ = true
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1685836354]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=273013694]
 shape = SubResource("CircleShape2D_6u2qo")
+
+[node name="Timer" type="Timer" parent="." unique_id=455515816]
+wait_time = 0.1
+autostart = true
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=158525001]
+navigation_layers = 2
+simplify_path = true
+debug_enabled = true
+debug_use_custom = true
+debug_path_custom_color = Color(0.3816698, 0.7240948, 0, 1)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=509427261]
+sprite_frames = SubResource("SpriteFrames_xmm7c")
+animation = &"Moving"
+frame_progress = 0.7853618
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
