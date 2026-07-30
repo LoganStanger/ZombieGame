@@ -1,17 +1,12 @@
 extends CharacterBody2D
+@onready var animated_sprite_2d = $AnimatedSprite2D
 
-const speed = 250
-@export var player: Node2D
-@onready var nav_agent := $NavigationAgent2D as NavigationAgent2D
+const speed = 2
 
+func _ready() -> void:
+	animated_sprite_2d.play("Moving")
 func _physics_process(_delta: float) -> void:
-	var dir = to_local(nav_agent.get_next_path_position()).normalized()
-	velocity = -dir * speed
-	move_and_slide()
-
-func makepath() -> void:
-	nav_agent.target_position = $"../Player".global_position
-
-func _on_timer_timeout() -> void:
 	look_at($"../Player".global_position)
-	makepath()
+	self.position.x = move_toward(self.position.x, $"../Player".global_position.x, speed)
+	self.position.y = move_toward(self.position.y, $"../Player".global_position.y, speed)
+	move_and_slide()

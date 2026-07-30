@@ -53,20 +53,6 @@ metadata/_edit_group_ = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=273013694]
 shape = SubResource("CircleShape2D_6u2qo")
 
-[node name="Timer" type="Timer" parent="." unique_id=455515816]
-wait_time = 0.1
-autostart = true
-
-[node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=158525001]
-navigation_layers = 2
-simplify_path = true
-debug_enabled = true
-debug_use_custom = true
-debug_path_custom_color = Color(0.3816698, 0.7240948, 0, 1)
-
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=509427261]
 sprite_frames = SubResource("SpriteFrames_xmm7c")
 animation = &"Moving"
-frame_progress = 0.7853618
-
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

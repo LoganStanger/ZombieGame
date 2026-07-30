@@ -121,6 +121,9 @@ radius = 20.09975
 [sub_resource type="CircleShape2D" id="CircleShape2D_4wfew"]
 radius = 24.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_0ice5"]
+radius = 60.38683
+
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=184723477]
 position = Vector2(45, 32)
 collision_mask = 3
@@ -148,6 +151,12 @@ z_index = 4
 position = Vector2(127, 85.00001)
 scale = Vector2(4.1239476, 4.123946)
 texture = ExtResource("3_yoka8")
+
+[node name="Spotlight" type="Area2D" parent="Sprite2D2" unique_id=10850113]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D2/Spotlight" unique_id=521910317]
+position = Vector2(-32.735626, -22.793703)
+shape = SubResource("CircleShape2D_0ice5")
 
 [connection signal="area_entered" from="LoganArea" to="." method="_on_logan_area_area_entered"]
 [connection signal="area_exited" from="LoganArea" to="." method="_on_logan_area_area_exited"]
