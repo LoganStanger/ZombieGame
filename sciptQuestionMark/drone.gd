@@ -1,7 +1,7 @@
 extends CharacterBody2D
 @onready var animated_sprite_2d = $AnimatedSprite2D
 
-const speed = 2
+const speed = 1
 
 func _ready() -> void:
 	animated_sprite_2d.play("Moving")

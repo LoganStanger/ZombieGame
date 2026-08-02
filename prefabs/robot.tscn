@@ -7,7 +7,7 @@
 radius = 30.066593
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mvkht"]
-radius = 14.035668
+radius = 6.0
 
 [node name="Robot" type="CharacterBody2D" unique_id=1850259403]
 motion_mode = 1
