@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cgk3eulw81qgo"]
 
 [ext_resource type="Script" uid="uid://cdgog7huwjabs" path="res://sciptQuestionMark/robot.gd" id="1_ld7d3"]
-[ext_resource type="Texture2D" uid="uid://8jqhtrxbjho1" path="res://HumanHuman.png" id="2_mvkht"]
+[ext_resource type="Texture2D" uid="uid://dolf3bn2k4san" path="res://RobotWalking.png" id="2_ld7d3"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ld7d3"]
 radius = 30.066593
@@ -9,15 +9,33 @@ radius = 30.066593
 [sub_resource type="CircleShape2D" id="CircleShape2D_mvkht"]
 radius = 6.0
 
-[node name="Robot" type="CharacterBody2D" unique_id=1850259403]
+[sub_resource type="AtlasTexture" id="AtlasTexture_mvkht"]
+atlas = ExtResource("2_ld7d3")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tmtcm"]
+atlas = ExtResource("2_ld7d3")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_upjok"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mvkht")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tmtcm")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Robot" type="CharacterBody2D" unique_id=1850259403 groups=["ActualMo"]]
 motion_mode = 1
 wall_min_slide_angle = 0.0
 safe_margin = 0.001
 script = ExtResource("1_ld7d3")
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1625494040]
-scale = Vector2(0.7151899, 0.7151899)
-texture = ExtResource("2_mvkht")
 
 [node name="Timer" type="Timer" parent="." unique_id=1748331261]
 wait_time = 0.1
@@ -28,12 +46,16 @@ simplify_path = true
 debug_use_custom = true
 debug_path_custom_color = Color(0.46881825, 0.41444546, 0.34689346, 1)
 
-[node name="Area2D" type="Area2D" parent="." unique_id=1156097505]
+[node name="Area2D" type="Area2D" parent="." unique_id=1156097505 groups=["ActualMo"]]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1657763709]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1657763709 groups=["ActualMo"]]
 shape = SubResource("CircleShape2D_ld7d3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1086024890]
 shape = SubResource("CircleShape2D_mvkht")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=297660923]
+scale = Vector2(1.53125, 1.53125)
+sprite_frames = SubResource("SpriteFrames_upjok")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

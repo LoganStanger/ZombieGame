@@ -19,6 +19,13 @@ config/icon="res://icon.svg"
 
 Booyah="*uid://b4sw6446q2j7v"
 
+[global_group]
+
+Enemies=""
+ActualMoss=""
+ActualMo=""
+Spotlight=""
+
 [input]
 
 ZombieUp={

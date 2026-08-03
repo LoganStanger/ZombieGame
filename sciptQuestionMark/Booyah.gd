@@ -12,6 +12,8 @@ var chancekeycard = 99
 var fallingHungry = 0
 var level = 1
 var TrueDashing = false
-var RobotSpawn = 4
-var DroneSpawn = 3
-var BlowSpawn = 2
+var RobotSpawn = 6
+var DroneSpawn = 6
+var global_position
+var global_positionY
+var global_positionX

@@ -1,6 +1,7 @@
 extends CharacterBody2D
 @onready var animated_sprite_2d = $AnimatedSprite2D
 
+var dying = false
 var NoMove = false
 var gudck = false
 var IsSprinting: bool = false
@@ -12,6 +13,9 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
+	Booyah.global_position = position
+	Booyah.global_positionX = position.x
+	Booyah.global_positionY = position.y
 	if Booyah.hunger == 0:
 		NoMove = true
 	if Input.is_action_just_pressed("ZombieBite") and Booyah.TrueDashing == false and NoMove == false:
@@ -65,6 +69,7 @@ func _physics_process(delta: float) -> void:
 		if velocity != Vector2(0,0) and Emoting == false:
 			animated_sprite_2d.play("Walking")
 		
+	
 	if Booyah.hunger == 0:
 		NoMove = true
 	else:
@@ -73,11 +78,20 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func _on_logan_area_area_entered(area: Area2D) -> void:
+	if area.is_in_group("ActualMo"):
+		dying = true
+		print("Logan")
 	if area.is_in_group("enemies") and gudck == false:
 		area.get_parent().gudck = true
 		gudck = true
 
 func _on_logan_area_area_exited(area: Area2D) -> void:
+	if area.is_in_group("ActualMo"):
+		dying = false
 	if area.is_in_group("enemies") and gudck:
 		area.get_parent().gudck = false
 		gudck = false
+
+func _on_timer_timeout() -> void:
+	if dying == true:
+		Booyah.hunger -= 5

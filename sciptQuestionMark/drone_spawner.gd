@@ -8,7 +8,8 @@ func _ready() -> void:
 	Logan()
 
 func Logan():
-	DroneSpawnTemp -= 0.5
+	if DroneSpawnTemp != 1:
+		DroneSpawnTemp -= 0.5
 	Inst()
 	await get_tree().create_timer(DroneSpawnTemp).timeout
 	Logan()
