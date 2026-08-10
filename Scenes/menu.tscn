@@ -1,14 +1,14 @@
 [gd_scene format=3 uid="uid://xr54p2nuh4lq"]
 
 [ext_resource type="Script" uid="uid://uf1bnbd88agn" path="res://sciptQuestionMark/button.gd" id="1_1rerr"]
-[ext_resource type="Texture2D" uid="uid://bpfe5f60qwx04" path="res://ZombieThumbnail.png" id="2_xhh6f"]
+[ext_resource type="Texture2D" uid="uid://cu3ewkkrdbie0" path="res://Zombie Game 2!!!! (1).png" id="2_xhh6f"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_cayip"]
 
 [node name="Node2D" type="Node2D" unique_id=1647401964]
 
 [node name="Button" type="Button" parent="." unique_id=1762506145]
-z_index = 1
+z_index = 8
 offset_left = 480.0
 offset_top = 256.0
 offset_right = 616.0
@@ -17,8 +17,9 @@ text = "Play"
 script = ExtResource("1_1rerr")
 
 [node name="ZombieThumbnail" type="Sprite2D" parent="." unique_id=336204432]
-position = Vector2(590.41754, 324.0625)
-scale = Vector2(3.1298313, 3.1298308)
+z_index = 5
+position = Vector2(599.99994, 328)
+scale = Vector2(0.8847754, 0.8847752)
 texture = ExtResource("2_xhh6f")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=914938683]

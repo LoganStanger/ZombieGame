@@ -18,23 +18,6 @@ func _physics_process(delta: float) -> void:
 	Booyah.global_positionY = position.y
 	if Booyah.hunger == 0:
 		NoMove = true
-	if Input.is_action_just_pressed("ZombieBite") and Booyah.TrueDashing == false and NoMove == false:
-		Booyah.TrueDashing = true
-		animated_sprite_2d.play("Biting")
-		Booyah.walk_speed -= 5000
-		Booyah.run_speed -= 5000
-		await get_tree().create_timer(0.3).timeout
-		Booyah.IsDashing = true
-		Booyah.hunger -= 50
-		Booyah.walk_speed += 50000
-		Booyah.run_speed += 50000
-		await get_tree().create_timer(0.1).timeout
-		Booyah.walk_speed -= 45000
-		Booyah.run_speed -= 45000
-		Booyah.IsDashing = false
-		Booyah.TrueDashing = false
-	if Booyah.IsDashing and gudck:
-		Booyah.hunger += 100
 	if	NoMove == true and Booyah.fallingHungry > 0:
 		Booyah.fallingHungry -= 400
 		var dir = Input.get_vector("ZombieLeft", "ZombieRight", "ZombieUp", "ZombieDown")
@@ -68,7 +51,6 @@ func _physics_process(delta: float) -> void:
 		velocity = dir * Booyah.run_speed * delta
 		if velocity != Vector2(0,0) and Emoting == false:
 			animated_sprite_2d.play("Walking")
-		
 	
 	if Booyah.hunger == 0:
 		NoMove = true

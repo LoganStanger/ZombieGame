@@ -146,6 +146,7 @@ shape = SubResource("CircleShape2D_g5igy")
 shape = SubResource("CircleShape2D_4wfew")
 
 [node name="Sprite2D2" type="Sprite2D" parent="." unique_id=563522976]
+visible = false
 z_index = 4
 position = Vector2(127, 85.00001)
 scale = Vector2(4.1239476, 4.123946)

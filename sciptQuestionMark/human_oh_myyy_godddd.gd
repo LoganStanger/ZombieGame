@@ -7,7 +7,7 @@ func _physics_process(_delta: float) -> void:
 	if LoganScrewYou == true:
 		self.position.x = move_toward(self.position.x, $"../Player".global_position.x, -speed)
 		self.position.y = move_toward(self.position.y, $"../Player".global_position.y, -speed)
-	if Booyah.IsDashing and gudck:
+	if gudck:
 		if randi_range(1,100) > Booyah.chancekeycard:
 			Booyah.keycardyep = true
 		Booyah.population -= 1

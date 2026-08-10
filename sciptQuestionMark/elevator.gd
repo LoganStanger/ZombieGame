@@ -1,16 +1,17 @@
-extends Sprite2D
+extends AnimatedSprite2D
+@onready var animated_sprite_2d = $"."
 
+func _ready() -> void:
+	animated_sprite_2d.play("Door closing")
+	await $".".animation_finished
+	animated_sprite_2d.play("Door closed")
+	
+func _physics_process(_delta: float) -> void:
+	if Booyah.keycardyep:
+		animated_sprite_2d.play("Door opening")
+	
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if area.is_in_group("loganArea") and Booyah.keycardyep:
-		if Booyah.TrueDashing == true and Booyah.IsDashing == false:
-			Booyah.TrueDashing = false
-			Booyah.walk_speed += 5000
-			Booyah.run_speed += 5000
-		if Booyah.TrueDashing == true and Booyah.IsDashing == true:
-			Booyah.TrueDashing = false
-			Booyah.walk_speed -= 45000
-			Booyah.run_speed -= 45000
-			Booyah.IsDashing = false
 		if Booyah.hungerSpeed > 1:
 			Booyah.hungerSpeed = 1
 		if Booyah.level == 10:
