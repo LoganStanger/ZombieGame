@@ -77,4 +77,4 @@ ZombieGangnamStyle={
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
-environment/defaults/default_clear_color=Color(0.42481676, 0.25642872, 0.117367916, 1)
+environment/defaults/default_clear_color=Color(0.07652118, 0.03974067, 0.0003885415, 1)

@@ -35,7 +35,7 @@ safe_margin = 0.001
 script = ExtResource("1_ld7d3")
 
 [node name="Timer" type="Timer" parent="." unique_id=1748331261]
-wait_time = 0.1
+wait_time = 0.3
 autostart = true
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1420517478]

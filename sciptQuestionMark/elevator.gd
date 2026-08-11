@@ -18,4 +18,6 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 			get_tree().call_deferred("change_scene_to_file", "res://Scenes/Kentucky.tscn")
 		else:
 			Booyah.level += 1
-			get_tree().call_deferred("change_scene_to_file", "res://Scenes/regent.tscn")
+			Booyah.Leaving = true
+			await get_tree().create_timer(2).timeout
+			get_tree().call_deferred("change_scene_to_file", "res://Scenes/Regent.tscn")

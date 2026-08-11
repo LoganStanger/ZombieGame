@@ -13,7 +13,8 @@ var fallingHungry = 0
 var level = 1
 var TrueDashing = false
 var RobotSpawn = 6
-var DroneSpawn = 6
+var DroneSpawn = 1
 var global_position
 var global_positionY
 var global_positionX
+var Leaving = false

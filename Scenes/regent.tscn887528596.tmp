@@ -3,8 +3,6 @@
 [ext_resource type="Texture2D" uid="uid://we36nw0ytdpm" path="res://ElvotionInMotion.png" id="1_yial5"]
 [ext_resource type="Script" uid="uid://ctoccyvhoveq7" path="res://sciptQuestionMark/sprite_2d.gd" id="2_j838w"]
 [ext_resource type="Texture2D" uid="uid://b3r8fcrtktequ" path="res://ZombieIdle.png" id="3_q7340"]
-[ext_resource type="Texture2D" uid="uid://bx7jm1dhmobfn" path="res://Ough.png" id="4_q7340"]
-[ext_resource type="Script" uid="uid://dg52on4xf5xtv" path="res://sciptQuestionMark/regent.gd" id="5_lo5r5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lo5r5"]
 atlas = ExtResource("3_q7340")
@@ -54,17 +52,3 @@ script = ExtResource("2_j838w")
 position = Vector2(-1.0000038, 17.999996)
 scale = Vector2(2.8281248, 2.8281248)
 sprite_frames = SubResource("SpriteFrames_dr7v1")
-
-[node name="Label" type="Label" parent="Sprite2D" unique_id=1705050446]
-offset_left = -456.7843
-offset_top = -45.17646
-offset_right = -75.7843
-offset_bottom = 50.82354
-theme_override_font_sizes/font_size = 70
-text = "Elevator -->"
-
-[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=499657046]
-position = Vector2(584, 314)
-scale = Vector2(3.035, 2.1966293)
-texture = ExtResource("4_q7340")
-script = ExtResource("5_lo5r5")
