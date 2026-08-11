@@ -6,7 +6,9 @@ const speed = 1
 func _ready() -> void:
 	animated_sprite_2d.play("Moving")
 func _physics_process(_delta: float) -> void:
+	if Booyah.Leaving:
+		queue_free()
 	look_at(Booyah.global_position)
-	self.position.x = move_toward(self.position.x, Booyah.global_positionX, speed)
-	self.position.y = move_toward(self.position.y, Booyah.global_positionY, speed)
+	self.global_position.x = move_toward(self.global_position.x, Booyah.global_positionX, speed)
+	self.global_position.y = move_toward(self.global_position.y, Booyah.global_positionY, speed)
 	move_and_slide()

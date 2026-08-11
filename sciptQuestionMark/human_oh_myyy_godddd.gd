@@ -1,9 +1,25 @@
 extends CharacterBody2D
+@onready var animated_sprite_2d = $AnimatedSprite2D
 
 var LoganScrewYou = false
 var speed = 1
 var gudck = false
+
+func _ready() -> void:
+	var skin = randi_range(1,5)
+	if skin == 1:
+		animated_sprite_2d.play("HumanOne")
+	if skin == 2:
+		animated_sprite_2d.play("HumanTwo")
+	if skin == 3:
+		animated_sprite_2d.play("HumanThree")
+	if skin == 4:
+		animated_sprite_2d.play("HumanFour")
+	if skin == 5:
+		animated_sprite_2d.play("HumanFive")
 func _physics_process(_delta: float) -> void:
+	if Booyah.Leaving:
+		queue_free()
 	if LoganScrewYou == true:
 		self.position.x = move_toward(self.position.x, $"../Player".global_position.x, -speed)
 		self.position.y = move_toward(self.position.y, $"../Player".global_position.y, -speed)

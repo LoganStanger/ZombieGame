@@ -8,4 +8,4 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	if Booyah.Leaving:
-		self.modulate.a += 0.01
+		self.modulate.a += 0.02

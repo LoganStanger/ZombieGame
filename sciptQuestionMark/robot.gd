@@ -9,6 +9,8 @@ func _ready() -> void:
 	animated_sprite_2d.play("default")
 	
 func _physics_process(_delta: float) -> void:
+	if Booyah.Leaving:
+		queue_free()
 	var dir = to_local(nav_agent.get_next_path_position()).normalized()
 	velocity = dir * speed
 	move_and_slide()

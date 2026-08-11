@@ -43,7 +43,6 @@ animations = [{
 }]
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=567769464]
-position = Vector2(658, 377)
 motion_mode = 1
 script = ExtResource("1_8k5ei")
 metadata/_edit_group_ = true

@@ -13,6 +13,8 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
+	if Booyah.Leaving:
+		queue_free()
 	Booyah.global_position = position
 	Booyah.global_positionX = position.x
 	Booyah.global_positionY = position.y
@@ -62,10 +64,10 @@ func _physics_process(delta: float) -> void:
 func _on_logan_area_area_entered(area: Area2D) -> void:
 	if area.is_in_group("ActualMo"):
 		dying = true
-		print("Logan")
 	if area.is_in_group("enemies") and gudck == false:
 		area.get_parent().gudck = true
 		gudck = true
+		print("Butt")
 
 func _on_logan_area_area_exited(area: Area2D) -> void:
 	if area.is_in_group("ActualMo"):

@@ -4,7 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://bnolonl255q21" path="res://BlackSquareRedKashPlsDontBeMad.png" id="2_bbrp3"]
 [ext_resource type="PackedScene" uid="uid://djt5pbq7pbexk" path="res://prefabs/playertwo.tscn" id="2_j8pi6"]
 [ext_resource type="Script" uid="uid://dnwfaagu6yfp1" path="res://sciptQuestionMark/label.gd" id="3_g232c"]
-[ext_resource type="PackedScene" uid="uid://bo3refg2iqy0h" path="res://prefabs/HumanOhMyyyGodddd.tscn" id="4_c8uak"]
 [ext_resource type="Script" uid="uid://cgypf0rnfckhp" path="res://sciptQuestionMark/level_bar_temp.gd" id="7_bbrp3"]
 [ext_resource type="Texture2D" uid="uid://djygwk53ge352" path="res://Keycard.png" id="7_qv86q"]
 [ext_resource type="Script" uid="uid://co24uwmdpv1l7" path="res://sciptQuestionMark/Keycard.gd" id="8_gxyp4"]
@@ -18,6 +17,8 @@
 [ext_resource type="Script" uid="uid://cw86xgfg5yw50" path="res://sciptQuestionMark/drone_spawner.gd" id="15_3rxv8"]
 [ext_resource type="Texture2D" uid="uid://bx7jm1dhmobfn" path="res://Ough.png" id="18_py4b5"]
 [ext_resource type="Script" uid="uid://y7wug7sivb1d" path="res://sciptQuestionMark/Curtain.gd" id="19_guoe7"]
+[ext_resource type="PackedScene" uid="uid://b8rmhxbnnq4sh" path="res://prefabs/Human.tscn" id="19_py4b5"]
+[ext_resource type="Script" uid="uid://ca0yrf0dws4bd" path="res://sciptQuestionMark/human_oh_myyy_godddd.gd" id="20_guoe7"]
 [ext_resource type="PackedScene" uid="uid://cgk3eulw81qgo" path="res://prefabs/robot.tscn" id="25_3ukj0"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_in11q"]
@@ -110,74 +111,6 @@ region = Rect2(32, 96, 32, 32)
 [sub_resource type="AtlasTexture" id="AtlasTexture_mhsfk"]
 atlas = ExtResource("10_h6u8q")
 region = Rect2(64, 96, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_dtljp"]
-atlas = ExtResource("11_py4b5")
-region = Rect2(0, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_o325k"]
-atlas = ExtResource("11_py4b5")
-region = Rect2(32, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_xnps2"]
-atlas = ExtResource("11_py4b5")
-region = Rect2(64, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_p0np7"]
-atlas = ExtResource("11_py4b5")
-region = Rect2(96, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_x3cog"]
-atlas = ExtResource("11_py4b5")
-region = Rect2(128, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_e354r"]
-atlas = ExtResource("11_py4b5")
-region = Rect2(160, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_fufbh"]
-atlas = ExtResource("11_py4b5")
-region = Rect2(0, 32, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_eik27"]
-atlas = ExtResource("11_py4b5")
-region = Rect2(32, 32, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_iaoef"]
-atlas = ExtResource("11_py4b5")
-region = Rect2(64, 32, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_qtkwf"]
-atlas = ExtResource("11_py4b5")
-region = Rect2(96, 32, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_x7c0d"]
-atlas = ExtResource("11_py4b5")
-region = Rect2(128, 32, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_g28a1"]
-atlas = ExtResource("11_py4b5")
-region = Rect2(160, 32, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ywyov"]
-atlas = ExtResource("11_py4b5")
-region = Rect2(0, 64, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_c1iwg"]
-atlas = ExtResource("11_py4b5")
-region = Rect2(32, 64, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_heryu"]
-atlas = ExtResource("11_py4b5")
-region = Rect2(64, 64, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_n81yg"]
-atlas = ExtResource("11_py4b5")
-region = Rect2(96, 64, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_di40e"]
-atlas = ExtResource("11_py4b5")
-region = Rect2(128, 64, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xvkof"]
 atlas = ExtResource("11_py4b5")
@@ -293,60 +226,9 @@ animations = [{
 }],
 "loop": false,
 "name": &"Door closing",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_dtljp")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_o325k")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_xnps2")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_p0np7")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_x3cog")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_e354r")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_fufbh")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_eik27")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_iaoef")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_qtkwf")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_x7c0d")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_g28a1")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ywyov")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_c1iwg")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_heryu")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_n81yg")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_di40e")
-}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_xvkof")
 }, {
@@ -391,11 +273,11 @@ animations = [{
 }],
 "loop": false,
 "name": &"Door opening",
-"speed": 14.0
+"speed": 20.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_bbrp3"]
-size = Vector2(189.11584, 126.07721)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_py4b5"]
+size = Vector2(118.19745, 59.09873)
 
 [node name="GameManager" type="Node2D" unique_id=2083841095]
 script = ExtResource("1_bvqnw")
@@ -407,23 +289,9 @@ occlusion_enabled = false
 navigation_visibility_mode = 2
 
 [node name="Player" parent="." unique_id=184723477 instance=ExtResource("2_j8pi6")]
-position = Vector2(224, 600)
+z_index = 1
+position = Vector2(638, 64)
 collision_mask = 1
-
-[node name="CharacterBody2D3" parent="." unique_id=446698375 instance=ExtResource("4_c8uak")]
-position = Vector2(456, 120)
-
-[node name="CharacterBody2D2" parent="." unique_id=1148857735 instance=ExtResource("4_c8uak")]
-position = Vector2(572, 231)
-
-[node name="CharacterBody2D4" parent="." unique_id=1382706505 instance=ExtResource("4_c8uak")]
-position = Vector2(928, 160)
-
-[node name="CharacterBody2D5" parent="." unique_id=55546703 instance=ExtResource("4_c8uak")]
-position = Vector2(840, 312)
-
-[node name="CharacterBody2D6" parent="." unique_id=1458379597 instance=ExtResource("4_c8uak")]
-position = Vector2(496, 496)
 
 [node name="HungerBarTemp" type="Label" parent="." unique_id=270291783]
 z_index = 5
@@ -459,8 +327,6 @@ position = Vector2(639, 34)
 scale = Vector2(1.999999, 1.999999)
 sprite_frames = SubResource("SpriteFrames_8hp58")
 animation = &"Door opening"
-frame = 30
-frame_progress = 1.0
 script = ExtResource("10_fit5p")
 
 [node name="Area2D" type="Area2D" parent="AnimatedSprite2D" unique_id=340153590 groups=["elevator"]]
@@ -468,8 +334,9 @@ position = Vector2(1, 1)
 scale = Vector2(0.38071907, 0.38071907)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/Area2D" unique_id=2019158400]
-position = Vector2(1.313324, -1.1920929e-06)
-shape = SubResource("RectangleShape2D_bbrp3")
+position = Vector2(-3.9398804, 19.042923)
+scale = Vector2(0.9999998, 0.9999998)
+shape = SubResource("RectangleShape2D_py4b5")
 
 [node name="Label" type="Label" parent="." unique_id=2030038700]
 show_behind_parent = true
@@ -502,21 +369,43 @@ Eat people to get hunger back"
 position = Vector2(301, 320)
 
 [node name="Drone" parent="." unique_id=567769464 instance=ExtResource("13_in11q")]
+position = Vector2(689, 367)
 
 [node name="RobotSpawner" type="Node2D" parent="." unique_id=458382247]
 position = Vector2(628, 305)
 script = ExtResource("14_8hp58")
 
 [node name="DroneSpawner" type="Node2D" parent="." unique_id=877269273]
-position = Vector2(-328, -139)
+position = Vector2(535, 366)
 script = ExtResource("15_3rxv8")
 
-[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1575557759]
+[node name="Curtain" type="Sprite2D" parent="." unique_id=1575557759]
+visible = false
 z_index = 87
 position = Vector2(597, 334.00003)
 scale = Vector2(3.17, 1.985955)
 texture = ExtResource("18_py4b5")
 script = ExtResource("19_guoe7")
+
+[node name="Human1" parent="." unique_id=1506376863 instance=ExtResource("19_py4b5")]
+position = Vector2(183, 597)
+script = ExtResource("20_guoe7")
+
+[node name="Human2" parent="." unique_id=40288507 instance=ExtResource("19_py4b5")]
+position = Vector2(896, 271)
+script = ExtResource("20_guoe7")
+
+[node name="Human3" parent="." unique_id=1835294793 instance=ExtResource("19_py4b5")]
+position = Vector2(1077, 470)
+script = ExtResource("20_guoe7")
+
+[node name="Human4" parent="." unique_id=982879231 instance=ExtResource("19_py4b5")]
+position = Vector2(168, 227)
+script = ExtResource("20_guoe7")
+
+[node name="Human5" parent="." unique_id=1903129750 instance=ExtResource("19_py4b5")]
+position = Vector2(488, 402)
+script = ExtResource("20_guoe7")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="area_entered" from="AnimatedSprite2D/Area2D" to="AnimatedSprite2D" method="_on_area_2d_area_entered"]

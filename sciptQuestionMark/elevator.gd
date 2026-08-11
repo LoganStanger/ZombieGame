@@ -2,13 +2,7 @@ extends AnimatedSprite2D
 @onready var animated_sprite_2d = $"."
 
 func _ready() -> void:
-	animated_sprite_2d.play("Door closing")
-	await $".".animation_finished
-	animated_sprite_2d.play("Door closed")
-	
-func _physics_process(_delta: float) -> void:
-	if Booyah.keycardyep:
-		animated_sprite_2d.play("Door opening")
+	animated_sprite_2d.play("Door opening")
 	
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if area.is_in_group("loganArea") and Booyah.keycardyep:
@@ -19,5 +13,6 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 		else:
 			Booyah.level += 1
 			Booyah.Leaving = true
+			animated_sprite_2d.play("Door closing")
 			await get_tree().create_timer(2).timeout
 			get_tree().call_deferred("change_scene_to_file", "res://Scenes/Regent.tscn")
