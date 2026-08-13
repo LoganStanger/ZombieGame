@@ -64,18 +64,11 @@ func _physics_process(delta: float) -> void:
 func _on_logan_area_area_entered(area: Area2D) -> void:
 	if area.is_in_group("ActualMo"):
 		dying = true
-	if area.is_in_group("enemies") and gudck == false:
-		area.get_parent().gudck = true
-		gudck = true
-		print("Butt")
 
 func _on_logan_area_area_exited(area: Area2D) -> void:
 	if area.is_in_group("ActualMo"):
 		dying = false
-	if area.is_in_group("enemies") and gudck:
-		area.get_parent().gudck = false
-		gudck = false
 
 func _on_timer_timeout() -> void:
-	if dying == true:
+	if dying == true and Booyah.hunger != 0:
 		Booyah.hunger -= 5

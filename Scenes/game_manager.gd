@@ -4,7 +4,7 @@ extends Node2D
 func _ready() -> void:
 	Booyah.keycardyep = false
 	Booyah.population = 5
-	Booyah.hunger = 200
+	Booyah.hunger = 100
 	Booyah.boredom = 100
 	Booyah.IsDashing = false
 	Booyah.chancekeycard = 99
@@ -16,9 +16,8 @@ func _process(_delta: float) -> void:
 		#if hunger drops below zero, brings it back up to zero and makes fail state.
 	if Booyah.hunger < 0:
 		Booyah.hunger = 0
-	
 
 #code to decrease hunger and boredom
 func _on_timer_timeout() -> void:
-	if Booyah.hunger != 0:
+	if Booyah.hunger != 0 and Booyah.Leaving == false:
 		Booyah.hunger -= Booyah.hungerSpeed

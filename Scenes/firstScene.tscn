@@ -10,15 +10,16 @@
 [ext_resource type="Texture2D" uid="uid://7dff827osnqu" path="res://DoorClosed.png" id="9_38ofj"]
 [ext_resource type="Script" uid="uid://c7u2akjn041hi" path="res://sciptQuestionMark/elevator.gd" id="10_fit5p"]
 [ext_resource type="Texture2D" uid="uid://bkf85euulpsd3" path="res://DoorClosing.png" id="10_h6u8q"]
-[ext_resource type="Script" uid="uid://dvafw25shvcgl" path="res://sciptQuestionMark/RestartButton.gd" id="11_fit5p"]
 [ext_resource type="Texture2D" uid="uid://wefwrl2h0g1j" path="res://DoorOpening.png" id="11_py4b5"]
 [ext_resource type="PackedScene" uid="uid://dho5e7m4rwqfn" path="res://prefabs/Drone.tscn" id="13_in11q"]
 [ext_resource type="Script" uid="uid://bhul5ysvpn11g" path="res://sciptQuestionMark/spawner.gd" id="14_8hp58"]
 [ext_resource type="Script" uid="uid://cw86xgfg5yw50" path="res://sciptQuestionMark/drone_spawner.gd" id="15_3rxv8"]
 [ext_resource type="Texture2D" uid="uid://bx7jm1dhmobfn" path="res://Ough.png" id="18_py4b5"]
+[ext_resource type="Script" uid="uid://bkjxav41uc0t3" path="res://sciptQuestionMark/whoops.gd" id="19_41v44"]
 [ext_resource type="Script" uid="uid://y7wug7sivb1d" path="res://sciptQuestionMark/Curtain.gd" id="19_guoe7"]
 [ext_resource type="PackedScene" uid="uid://b8rmhxbnnq4sh" path="res://prefabs/Human.tscn" id="19_py4b5"]
-[ext_resource type="Script" uid="uid://ca0yrf0dws4bd" path="res://sciptQuestionMark/human_oh_myyy_godddd.gd" id="20_guoe7"]
+[ext_resource type="Script" uid="uid://duh24c6ult4g" path="res://sciptQuestionMark/you_died.gd" id="20_ef70v"]
+[ext_resource type="Script" uid="uid://bnuc5fid36yse" path="res://sciptQuestionMark/clicki_here.gd" id="21_a7t5i"]
 [ext_resource type="PackedScene" uid="uid://cgk3eulw81qgo" path="res://prefabs/robot.tscn" id="25_3ukj0"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_in11q"]
@@ -312,7 +313,7 @@ text = "Level"
 script = ExtResource("7_bbrp3")
 
 [node name="Timer" type="Timer" parent="." unique_id=985129448]
-wait_time = 0.5
+wait_time = 0.1
 autostart = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1565151067]
@@ -338,33 +339,6 @@ position = Vector2(-3.9398804, 19.042923)
 scale = Vector2(0.9999998, 0.9999998)
 shape = SubResource("RectangleShape2D_py4b5")
 
-[node name="Label" type="Label" parent="." unique_id=2030038700]
-show_behind_parent = true
-z_index = 5
-offset_left = 56.0
-offset_top = 360.0
-offset_right = 293.0
-offset_bottom = 400.0
-text = "YOU LOSE!!!!!! Click to try again"
-script = ExtResource("11_fit5p")
-
-[node name="Button" type="Button" parent="Label" unique_id=583089581]
-layout_mode = 0
-offset_right = 248.0
-offset_bottom = 24.0
-
-[node name="Label2" type="Label" parent="." unique_id=1125685745]
-z_index = 4
-offset_left = 64.0
-offset_top = 400.0
-offset_right = 295.0
-offset_bottom = 527.0
-text = "Left click = bite
-Hold space = sprint
-Make it past level 10 to win
-Lose all hunger to lose
-Eat people to get hunger back"
-
 [node name="Robot" parent="." unique_id=1850259403 instance=ExtResource("25_3ukj0")]
 position = Vector2(301, 320)
 
@@ -380,7 +354,6 @@ position = Vector2(535, 366)
 script = ExtResource("15_3rxv8")
 
 [node name="Curtain" type="Sprite2D" parent="." unique_id=1575557759]
-visible = false
 z_index = 87
 position = Vector2(597, 334.00003)
 scale = Vector2(3.17, 1.985955)
@@ -389,24 +362,57 @@ script = ExtResource("19_guoe7")
 
 [node name="Human1" parent="." unique_id=1506376863 instance=ExtResource("19_py4b5")]
 position = Vector2(183, 597)
-script = ExtResource("20_guoe7")
 
 [node name="Human2" parent="." unique_id=40288507 instance=ExtResource("19_py4b5")]
 position = Vector2(896, 271)
-script = ExtResource("20_guoe7")
 
 [node name="Human3" parent="." unique_id=1835294793 instance=ExtResource("19_py4b5")]
 position = Vector2(1077, 470)
-script = ExtResource("20_guoe7")
 
 [node name="Human4" parent="." unique_id=982879231 instance=ExtResource("19_py4b5")]
 position = Vector2(168, 227)
-script = ExtResource("20_guoe7")
 
 [node name="Human5" parent="." unique_id=1903129750 instance=ExtResource("19_py4b5")]
 position = Vector2(488, 402)
-script = ExtResource("20_guoe7")
+
+[node name="Whoops" type="Label" parent="." unique_id=855308035]
+z_index = 88
+offset_left = 439.0
+offset_top = 166.0
+offset_right = 740.0
+offset_bottom = 272.0
+theme_override_font_sizes/font_size = 77
+text = "Whoops"
+script = ExtResource("19_41v44")
+
+[node name="You died" type="Label" parent="." unique_id=49697107]
+z_index = 88
+offset_left = 484.0
+offset_top = 270.0
+offset_right = 694.0
+offset_bottom = 339.0
+theme_override_font_sizes/font_size = 50
+text = "You died"
+script = ExtResource("20_ef70v")
+
+[node name="ClickiHere" type="Label" parent="." unique_id=885257944]
+z_index = 88
+offset_left = 455.0
+offset_top = 357.0
+offset_right = 731.0
+offset_bottom = 394.0
+theme_override_colors/font_color = Color(0.8303357, 0.83033496, 0.83033514, 1)
+theme_override_font_sizes/font_size = 27
+text = "(Click here to restart)"
+script = ExtResource("21_a7t5i")
+
+[node name="Button" type="Button" parent="ClickiHere" unique_id=138915470]
+layout_mode = 0
+offset_left = -5.0
+offset_top = -1.0
+offset_right = 287.0
+offset_bottom = 45.0
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="area_entered" from="AnimatedSprite2D/Area2D" to="AnimatedSprite2D" method="_on_area_2d_area_entered"]
-[connection signal="pressed" from="Label/Button" to="Label" method="_on_button_pressed"]
+[connection signal="pressed" from="ClickiHere/Button" to="ClickiHere" method="_on_button_pressed"]

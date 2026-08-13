@@ -1,6 +1,6 @@
 extends Node
 
-var hunger = 200
+var hunger = 100
 var hungerSpeed = 1
 var boredom = 100
 var walk_speed = 15000
@@ -18,3 +18,4 @@ var global_position
 var global_positionY
 var global_positionX
 var Leaving = false
+var newbie = true
