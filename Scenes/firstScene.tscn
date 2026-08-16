@@ -20,6 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://b8rmhxbnnq4sh" path="res://prefabs/Human.tscn" id="19_py4b5"]
 [ext_resource type="Script" uid="uid://duh24c6ult4g" path="res://sciptQuestionMark/you_died.gd" id="20_ef70v"]
 [ext_resource type="Script" uid="uid://bnuc5fid36yse" path="res://sciptQuestionMark/clicki_here.gd" id="21_a7t5i"]
+[ext_resource type="PackedScene" uid="uid://daa7mdp1vk22w" path="res://prefabs/health_ui.tscn" id="22_ef70v"]
 [ext_resource type="PackedScene" uid="uid://cgk3eulw81qgo" path="res://prefabs/robot.tscn" id="25_3ukj0"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_in11q"]
@@ -354,6 +355,7 @@ position = Vector2(535, 366)
 script = ExtResource("15_3rxv8")
 
 [node name="Curtain" type="Sprite2D" parent="." unique_id=1575557759]
+visible = false
 z_index = 87
 position = Vector2(597, 334.00003)
 scale = Vector2(3.17, 1.985955)
@@ -413,6 +415,12 @@ offset_left = -5.0
 offset_top = -1.0
 offset_right = 287.0
 offset_bottom = 45.0
+
+[node name="HealthUI" parent="." unique_id=1660745684 instance=ExtResource("22_ef70v")]
+offset_left = 750.0
+offset_top = 553.0
+offset_right = 750.0
+offset_bottom = 553.0
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="area_entered" from="AnimatedSprite2D/Area2D" to="AnimatedSprite2D" method="_on_area_2d_area_entered"]
