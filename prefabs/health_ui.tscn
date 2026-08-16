@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://daa7mdp1vk22w"]
+
+[ext_resource type="Texture2D" uid="uid://bwcihfeeeg1wb" path="res://Under.png" id="1_aq563"]
+[ext_resource type="Script" uid="uid://dw1ha0rl3igtg" path="res://sciptQuestionMark/health_ui.gd" id="1_iftiy"]
+[ext_resource type="Texture2D" uid="uid://coin8sjbk8igs" path="res://Over.png" id="2_iftiy"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bwh7e"]
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fravc"]
+bg_color = Color(1, 0.59607846, 0, 1)
+
+[node name="HealthUI" type="Control" unique_id=1660745684]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_iftiy")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1190317362]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_aq563")
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect" unique_id=1588098837]
+clip_children = 1
+z_index = -1
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_iftiy")
+
+[node name="ProgressBar" type="ProgressBar" parent="TextureRect/TextureRect" unique_id=1310491137]
+layout_mode = 0
+offset_left = 41.0
+offset_top = 14.0
+offset_right = 264.0
+offset_bottom = 77.0
+theme_override_styles/background = SubResource("StyleBoxFlat_bwh7e")
+theme_override_styles/fill = SubResource("StyleBoxFlat_fravc")
+value = 100.0
+show_percentage = false

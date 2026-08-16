@@ -401,12 +401,13 @@ offset_left = 455.0
 offset_top = 357.0
 offset_right = 731.0
 offset_bottom = 394.0
-theme_override_colors/font_color = Color(0.8303357, 0.83033496, 0.83033514, 1)
+theme_override_colors/font_color = Color(0.5330367, 0.5330367, 0.5330367, 1)
 theme_override_font_sizes/font_size = 27
 text = "(Click here to restart)"
 script = ExtResource("21_a7t5i")
 
 [node name="Button" type="Button" parent="ClickiHere" unique_id=138915470]
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_left = -5.0
 offset_top = -1.0

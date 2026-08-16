@@ -3,8 +3,8 @@ extends Node
 var hunger = 100
 var hungerSpeed = 1
 var boredom = 100
-var walk_speed = 15000
-var run_speed = 20000
+var walk_speed = 10000
+var run_speed = 15000
 var IsDashing = false
 var keycardyep = false
 var population = 5
