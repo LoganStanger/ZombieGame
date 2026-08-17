@@ -47,7 +47,7 @@ motion_mode = 1
 script = ExtResource("1_8k5ei")
 metadata/_edit_group_ = true
 
-[node name="Area2D" type="Area2D" parent="." unique_id=1685836354]
+[node name="Area2D" type="Area2D" parent="." unique_id=1685836354 groups=["ActualMo"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=273013694]
 shape = SubResource("CircleShape2D_6u2qo")

@@ -1,6 +1,7 @@
 extends Node
 
-var hunger = 100
+var dying = false
+var hunger = 200
 var hungerSpeed = 1
 var boredom = 100
 var walk_speed = 10000

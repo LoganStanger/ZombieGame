@@ -1,7 +1,6 @@
 extends CharacterBody2D
 @onready var animated_sprite_2d = $AnimatedSprite2D
 
-var dying = false
 var NoMove = false
 var gudck = false
 var IsSprinting: bool = false
@@ -63,12 +62,12 @@ func _physics_process(delta: float) -> void:
 
 func _on_logan_area_area_entered(area: Area2D) -> void:
 	if area.is_in_group("ActualMo"):
-		dying = true
+		Booyah.dying = true
 
 func _on_logan_area_area_exited(area: Area2D) -> void:
 	if area.is_in_group("ActualMo"):
-		dying = false
+		Booyah.dying = false
 
 func _on_timer_timeout() -> void:
-	if dying == true and Booyah.hunger != 0:
+	if Booyah.dying == true and Booyah.hunger != 0:
 		Booyah.hunger -= 5

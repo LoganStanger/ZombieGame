@@ -38,7 +38,7 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 			Booyah.chancekeycard = 50
 		if Booyah.population == 1:
 			Booyah.chancekeycard = 0
-		Booyah.hunger = 100
+		Booyah.hunger += 100
 		queue_free()
 	if area.is_in_group("Spotlight"):
 		LoganScrewYou = true
