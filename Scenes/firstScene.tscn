@@ -22,6 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://ce44ipmsxyhai" path="res://Emergency.png" id="22_a7t5i"]
 [ext_resource type="PackedScene" uid="uid://daa7mdp1vk22w" path="res://prefabs/health_ui.tscn" id="22_ef70v"]
 [ext_resource type="Script" uid="uid://dmei6rocbdllf" path="res://sciptQuestionMark/EmergencySign.gd" id="23_4456t"]
+[ext_resource type="Texture2D" uid="uid://to6d1oebxtgl" path="res://Door.png" id="24_4456t"]
 [ext_resource type="PackedScene" uid="uid://cgk3eulw81qgo" path="res://prefabs/robot.tscn" id="25_3ukj0"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_in11q"]
@@ -341,10 +342,12 @@ collision_mask = 1
 
 [node name="LevelBarTemp" type="Label" parent="." unique_id=1957414686]
 z_index = 5
-offset_left = 152.0
-offset_top = 152.0
-offset_right = 255.0
-offset_bottom = 175.0
+offset_left = -1.0
+offset_top = 552.0
+offset_right = 167.0
+offset_bottom = 644.0
+theme_override_colors/font_color = Color(0.4392157, 0.8666667, 0.59607846, 1)
+theme_override_font_sizes/font_size = 67
 text = "Level"
 script = ExtResource("7_bbrp3")
 
@@ -376,17 +379,17 @@ scale = Vector2(0.9999998, 0.9999998)
 shape = SubResource("RectangleShape2D_py4b5")
 
 [node name="Robot" parent="." unique_id=1850259403 instance=ExtResource("25_3ukj0")]
-position = Vector2(301, 320)
+position = Vector2(854, 46)
 
 [node name="Drone" parent="." unique_id=567769464 instance=ExtResource("13_in11q")]
-position = Vector2(689, 367)
+position = Vector2(248, 54)
 
 [node name="RobotSpawner" type="Node2D" parent="." unique_id=458382247]
-position = Vector2(628, 305)
+position = Vector2(855, 43)
 script = ExtResource("14_8hp58")
 
 [node name="DroneSpawner" type="Node2D" parent="." unique_id=877269273]
-position = Vector2(535, 366)
+position = Vector2(250, 37)
 script = ExtResource("15_3rxv8")
 
 [node name="Curtain" type="Sprite2D" parent="." unique_id=1575557759]
@@ -465,6 +468,16 @@ sprite_frames = SubResource("SpriteFrames_e354r")
 animation = &"Emergency"
 frame_progress = 0.27846003
 script = ExtResource("23_4456t")
+
+[node name="Door" type="Sprite2D" parent="." unique_id=1355609876]
+position = Vector2(251, 24)
+scale = Vector2(0.4609375, 0.4609375)
+texture = ExtResource("24_4456t")
+
+[node name="Door2" type="Sprite2D" parent="." unique_id=224146797]
+position = Vector2(855.00006, 24.000002)
+scale = Vector2(0.43359408, 0.43359408)
+texture = ExtResource("24_4456t")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="area_entered" from="AnimatedSprite2D/Area2D" to="AnimatedSprite2D" method="_on_area_2d_area_entered"]

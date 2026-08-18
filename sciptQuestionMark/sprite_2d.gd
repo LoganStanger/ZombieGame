@@ -10,13 +10,13 @@ func _ready() -> void:
 	if big == 1:
 		get_tree().change_scene_to_file("res://Scenes/firstScene.tscn")
 	if big == 2:
-		pass
+		get_tree().change_scene_to_file("res://Scenes/firstScene.tscn")
 	if big == 3:
-		pass
+		get_tree().change_scene_to_file("res://Scenes/firstScene.tscn")
 	if big == 4:
-		pass
+		get_tree().change_scene_to_file("res://Scenes/firstScene.tscn")
 	if big == 5:
-		pass
+		get_tree().change_scene_to_file("res://Scenes/firstScene.tscn")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:

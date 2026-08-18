@@ -5,9 +5,9 @@ func _ready() -> void:
 	Booyah.keycardyep = false
 	Booyah.population = 5
 	Booyah.hunger = 200
-	Booyah.boredom = 100
 	Booyah.IsDashing = false
 	Booyah.chancekeycard = 99
+	Booyah.Leaving = false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
