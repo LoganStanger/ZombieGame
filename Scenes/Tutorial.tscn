@@ -1,0 +1,377 @@
+[gd_scene format=3 uid="uid://d0e4q72yldtb2"]
+
+[ext_resource type="Script" uid="uid://dwnnwlvu6jef" path="res://sciptQuestionMark/health_ui2.gd" id="1_5gw1s"]
+[ext_resource type="Texture2D" uid="uid://b3r8fcrtktequ" path="res://ZombieIdle.png" id="1_sgy12"]
+[ext_resource type="Texture2D" uid="uid://dolf3bn2k4san" path="res://RobotWalking.png" id="2_5gw1s"]
+[ext_resource type="Texture2D" uid="uid://by10yqp760xuu" path="res://DroneSheet.png" id="3_brn58"]
+[ext_resource type="Script" uid="uid://d0yf48nbi7fq6" path="res://sciptQuestionMark/FakeZombie.gd" id="3_fx2vl"]
+[ext_resource type="Texture2D" uid="uid://brmis5ybagv65" path="res://HumanOne.png" id="4_fx2vl"]
+[ext_resource type="Script" uid="uid://c5qbocxlbqcak" path="res://sciptQuestionMark/FakeRobot.gd" id="5_fx2vl"]
+[ext_resource type="Texture2D" uid="uid://b07lqbguho6lo" path="res://HumanTwo.png" id="5_mqud2"]
+[ext_resource type="Texture2D" uid="uid://bwly8qkhjmwk1" path="res://HumanThree.png" id="6_sswaw"]
+[ext_resource type="Texture2D" uid="uid://cdiggq22gkk0y" path="res://HumanFour.png" id="7_kpk71"]
+[ext_resource type="Script" uid="uid://cy0nyarj1niev" path="res://sciptQuestionMark/FakeDrone.gd" id="7_m8quk"]
+[ext_resource type="Texture2D" uid="uid://d2twv36meq4mj" path="res://HumanFive.png" id="8_8nvbb"]
+[ext_resource type="Texture2D" uid="uid://ce44ipmsxyhai" path="res://Emergency.png" id="9_orlbv"]
+[ext_resource type="Texture2D" uid="uid://djygwk53ge352" path="res://Keycard.png" id="10_m8quk"]
+[ext_resource type="Texture2D" uid="uid://to6d1oebxtgl" path="res://Door.png" id="11_qae3o"]
+[ext_resource type="Texture2D" uid="uid://7dff827osnqu" path="res://DoorClosed.png" id="12_jyml5"]
+[ext_resource type="PackedScene" uid="uid://daa7mdp1vk22w" path="res://prefabs/health_ui.tscn" id="13_8brlw"]
+[ext_resource type="Script" uid="uid://1cj4ftumdsdm" path="res://sciptQuestionMark/FakeHuman.gd" id="13_qae3o"]
+[ext_resource type="Script" uid="uid://b0pgujvh2hrcc" path="res://sciptQuestionMark/FakeWarning.gd" id="15_jyml5"]
+[ext_resource type="Script" uid="uid://b8g2mik4kke6" path="res://sciptQuestionMark/SkipButton.gd" id="20_8nvbb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fk76v"]
+atlas = ExtResource("1_sgy12")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_spg5l"]
+atlas = ExtResource("1_sgy12")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qqlkg"]
+atlas = ExtResource("1_sgy12")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ctw03"]
+atlas = ExtResource("1_sgy12")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sihuq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fk76v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_spg5l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qqlkg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ctw03")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_amhwl"]
+atlas = ExtResource("2_5gw1s")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v6u8i"]
+atlas = ExtResource("2_5gw1s")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8q58x"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_amhwl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v6u8i")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_anpm4"]
+atlas = ExtResource("3_brn58")
+region = Rect2(0, 0, 34, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dut48"]
+atlas = ExtResource("3_brn58")
+region = Rect2(34, 0, 34, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pvfe1"]
+atlas = ExtResource("3_brn58")
+region = Rect2(0, 34, 34, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mceqy"]
+atlas = ExtResource("3_brn58")
+region = Rect2(34, 34, 34, 34)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_p8xjf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_anpm4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dut48")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pvfe1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mceqy")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fouuw"]
+atlas = ExtResource("4_fx2vl")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ppni0"]
+atlas = ExtResource("4_fx2vl")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1xisj"]
+atlas = ExtResource("5_mqud2")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ila5h"]
+atlas = ExtResource("5_mqud2")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3st2x"]
+atlas = ExtResource("6_sswaw")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_333q5"]
+atlas = ExtResource("6_sswaw")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d4stk"]
+atlas = ExtResource("7_kpk71")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r3kit"]
+atlas = ExtResource("7_kpk71")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nsnw8"]
+atlas = ExtResource("8_8nvbb")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7btw3"]
+atlas = ExtResource("8_8nvbb")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bihrv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fouuw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ppni0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1xisj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ila5h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3st2x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_333q5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d4stk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r3kit")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nsnw8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7btw3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oq7l7"]
+atlas = ExtResource("9_orlbv")
+region = Rect2(0, 0, 201, 209)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_emhi4"]
+atlas = ExtResource("9_orlbv")
+region = Rect2(201, 0, 201, 209)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t7ysk"]
+atlas = ExtResource("9_orlbv")
+region = Rect2(0, 209, 201, 209)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_84vcq"]
+atlas = ExtResource("9_orlbv")
+region = Rect2(201, 209, 201, 209)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b0w1x"]
+atlas = ExtResource("9_orlbv")
+region = Rect2(0, 418, 201, 209)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ndl8n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oq7l7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_emhi4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t7ysk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_84vcq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b0w1x")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3vnur"]
+atlas = ExtResource("10_m8quk")
+region = Rect2(0, 0, 400, 356)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ktq20"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3vnur")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fdjc6"]
+atlas = ExtResource("11_qae3o")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_15csd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fdjc6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_enh33"]
+atlas = ExtResource("12_jyml5")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sma0a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_enh33")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D" unique_id=1994330053]
+
+[node name="TextEdit" type="TextEdit" parent="." unique_id=1729130279]
+offset_left = 29.0
+offset_top = 6.0
+offset_right = 576.0
+offset_bottom = 643.0
+theme_override_font_sizes/font_size = 17
+text = "TUTORIAL:
+In this game, you (A), will try to hunt down 
+humans (E) to get their keycard (F). Humans will
+only have a small chance of dropping their keycard
+so you have to eat multiple of them. Humans also
+come in all shapes and sizes, so keep wary.
+
+A timer (I) will also be constantly ticking down, this
+is your hunger. Eat humans to increase your hunger
+bar by a sizable amount.
+
+However you're not alone... you'll have to run away 
+from enemies while eating. Also in the floor are 
+drones (C) and robots (H). Drones and robots spawn
+from doors (G), and slowly spawn faster. When
+touching an enemy, you will start to lose hunger 
+faster and the emergency sign (B) will start flashing
+to warn you. 
+
+When you have the keycard, the level isn't over yet.
+Run back to the elevator (D) to go to the next level.
+Have fun!"
+script = ExtResource("1_5gw1s")
+
+[node name="Zombie" type="AnimatedSprite2D" parent="." unique_id=656670043]
+position = Vector2(633.49994, 104.9739)
+scale = Vector2(1.53125, 1.53125)
+sprite_frames = SubResource("SpriteFrames_sihuq")
+script = ExtResource("3_fx2vl")
+
+[node name="Robot" type="AnimatedSprite2D" parent="." unique_id=463882365]
+position = Vector2(786.49994, 456.9739)
+scale = Vector2(1.8124998, 1.8124998)
+sprite_frames = SubResource("SpriteFrames_8q58x")
+script = ExtResource("5_fx2vl")
+
+[node name="Drone" type="AnimatedSprite2D" parent="." unique_id=295544267]
+position = Vector2(946.4999, 98.97387)
+scale = Vector2(1.4411764, 1.4411764)
+sprite_frames = SubResource("SpriteFrames_p8xjf")
+script = ExtResource("7_m8quk")
+
+[node name="Human" type="AnimatedSprite2D" parent="." unique_id=1316216279]
+position = Vector2(789.5, 269.9739)
+scale = Vector2(1.59375, 1.59375)
+sprite_frames = SubResource("SpriteFrames_bihrv")
+script = ExtResource("13_qae3o")
+
+[node name="Warning" type="AnimatedSprite2D" parent="." unique_id=1683947244]
+position = Vector2(791.49994, 97.973885)
+scale = Vector2(0.30597016, 0.30597016)
+sprite_frames = SubResource("SpriteFrames_ndl8n")
+script = ExtResource("15_jyml5")
+
+[node name="Keycard" type="AnimatedSprite2D" parent="." unique_id=1714543768]
+position = Vector2(935.4999, 270.9739)
+scale = Vector2(0.20786524, 0.20786524)
+sprite_frames = SubResource("SpriteFrames_ktq20")
+
+[node name="Door" type="AnimatedSprite2D" parent="." unique_id=2055540730]
+position = Vector2(623.5, 460.9739)
+scale = Vector2(0.4492186, 0.4492186)
+sprite_frames = SubResource("SpriteFrames_15csd")
+
+[node name="Elevator" type="AnimatedSprite2D" parent="." unique_id=2025601380]
+position = Vector2(619.5, 261.9739)
+scale = Vector2(1.71875, 1.71875)
+sprite_frames = SubResource("SpriteFrames_sma0a")
+
+[node name="HealthUI" parent="." unique_id=1660745684 instance=ExtResource("13_8brlw")]
+offset_left = 863.49994
+offset_top = 422.9739
+offset_right = 863.49994
+offset_bottom = 422.9739
+
+[node name="Button" type="Button" parent="." unique_id=1067331192]
+offset_left = 895.0
+offset_top = 548.0
+offset_right = 1145.0
+offset_bottom = 644.0
+theme_override_colors/font_color = Color(0.5232104, 0.99999994, 0.57099736, 1)
+theme_override_font_sizes/font_size = 35
+text = "CONTINUE"
+script = ExtResource("20_8nvbb")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
