@@ -1,5 +1,6 @@
 extends Node
 
+var steadyHunger = 200
 var dying = false
 var hunger = 200
 var hungerSpeed = 1
@@ -19,3 +20,4 @@ var global_positionY
 var global_positionX
 var Leaving = false
 var newbie = true
+var curtainFinal = false

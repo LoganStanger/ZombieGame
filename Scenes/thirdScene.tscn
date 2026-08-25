@@ -1,6 +1,9 @@
 [gd_scene format=4 uid="uid://oejtom5xrc60"]
 
 [ext_resource type="PackedScene" uid="uid://cyxn220acpryl" path="res://Scenes/firstScene.tscn" id="1_hg2w0"]
+[ext_resource type="Texture2D" uid="uid://c5ty322g2pmnb" path="res://OfficeSupplies/ComputerGame.png" id="2_0obka"]
+[ext_resource type="Texture2D" uid="uid://bl1y6lcjwvjbj" path="res://OfficeSupplies/Banana.png" id="3_htfwp"]
+[ext_resource type="Texture2D" uid="uid://dhv7ngodv72eb" path="res://OfficeSupplies/PlantOffice.png" id="4_htfwp"]
 
 [node name="GameManager" unique_id=2083841095 instance=ExtResource("1_hg2w0")]
 
@@ -28,3 +31,35 @@ position = Vector2(326, 277)
 
 [node name="Human5" parent="." index="15" unique_id=1903129750]
 position = Vector2(924, 475)
+
+[node name="ComputerGame" type="Sprite2D" parent="." index="23" unique_id=1801656645]
+position = Vector2(1071, 59)
+scale = Vector2(0.2675783, 0.2675783)
+texture = ExtResource("2_0obka")
+
+[node name="Banana2" type="Sprite2D" parent="." index="24" unique_id=445267899]
+position = Vector2(961, 516)
+scale = Vector2(0.203125, 0.203125)
+texture = ExtResource("3_htfwp")
+
+[node name="Plant3" type="Sprite2D" parent="." index="25" unique_id=18934667]
+position = Vector2(369, 220)
+scale = Vector2(0.17578125, 0.17578125)
+texture = ExtResource("4_htfwp")
+
+[node name="Plant4" type="Sprite2D" parent="." index="26" unique_id=774605187]
+position = Vector2(176, 218)
+scale = Vector2(0.19921876, 0.19921876)
+texture = ExtResource("4_htfwp")
+
+[node name="Plant" parent="." index="28" unique_id=1693933261]
+visible = false
+
+[node name="Plant2" parent="." index="29" unique_id=1444298483]
+visible = false
+
+[node name="WaterCooler" parent="." index="30" unique_id=2024204382]
+visible = false
+
+[node name="Banana" parent="." index="31" unique_id=84631767]
+visible = false

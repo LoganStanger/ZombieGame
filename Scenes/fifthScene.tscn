@@ -1,6 +1,8 @@
 [gd_scene format=4 uid="uid://dypbhgten17tx"]
 
 [ext_resource type="PackedScene" uid="uid://b6ap3s3ldm454" path="res://Scenes/fourthScene.tscn" id="1_kkxtf"]
+[ext_resource type="Texture2D" uid="uid://den0urnwipvhg" path="res://OfficeSupplies/TrashCan.png" id="2_bcnb2"]
+[ext_resource type="Texture2D" uid="uid://bl1y6lcjwvjbj" path="res://OfficeSupplies/Banana.png" id="3_bh4i2"]
 
 [node name="GameManager" unique_id=2083841095 instance=ExtResource("1_kkxtf")]
 
@@ -27,3 +29,19 @@ position = Vector2(510, 115)
 
 [node name="Human5" parent="." index="15" unique_id=1903129750]
 position = Vector2(68, 384)
+
+[node name="PlantJar" parent="." index="23" unique_id=670696666]
+texture = ExtResource("2_bcnb2")
+
+[node name="Plant" parent="." index="24" unique_id=1693933261]
+position = Vector2(226, 409)
+
+[node name="Plant2" parent="." index="25" unique_id=1444298483]
+position = Vector2(1097, 321.99997)
+
+[node name="WaterCooler" parent="." index="26" unique_id=2024204382]
+position = Vector2(54, 164)
+
+[node name="Sprite2D2" parent="." index="28" unique_id=243738783]
+position = Vector2(749, 280.00003)
+texture = ExtResource("3_bh4i2")

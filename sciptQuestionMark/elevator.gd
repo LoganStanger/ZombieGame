@@ -11,6 +11,9 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 		if Booyah.level == 10:
 			get_tree().call_deferred("change_scene_to_file", "res://Scenes/Kentucky.tscn")
 		else:
+			Booyah.RobotSpawn -= 0.1
+			Booyah.DroneSpawn -= 0.1
+			Booyah.steadyHunger -= 5
 			Booyah.level += 1
 			Booyah.Leaving = true
 			animated_sprite_2d.play("Door closing")

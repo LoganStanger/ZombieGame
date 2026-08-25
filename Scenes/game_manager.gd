@@ -4,7 +4,7 @@ extends Node2D
 func _ready() -> void:
 	Booyah.keycardyep = false
 	Booyah.population = 5
-	Booyah.hunger = 200
+	Booyah.hunger = Booyah.steadyHunger
 	Booyah.IsDashing = false
 	Booyah.chancekeycard = 99
 	Booyah.Leaving = false

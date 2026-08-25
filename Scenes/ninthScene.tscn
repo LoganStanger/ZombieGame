@@ -1,6 +1,10 @@
 [gd_scene format=4 uid="uid://nbgfi4kfcmro"]
 
 [ext_resource type="PackedScene" uid="uid://b6ap3s3ldm454" path="res://Scenes/fourthScene.tscn" id="1_yfiuw"]
+[ext_resource type="Texture2D" uid="uid://dhv7ngodv72eb" path="res://OfficeSupplies/PlantOffice.png" id="2_h8ohp"]
+[ext_resource type="Texture2D" uid="uid://c14jqt4355nn7" path="res://OfficeSupplies/WaterCooler.png" id="3_pgs76"]
+[ext_resource type="Texture2D" uid="uid://den0urnwipvhg" path="res://OfficeSupplies/TrashCan.png" id="4_7j3iv"]
+[ext_resource type="Texture2D" uid="uid://c5ty322g2pmnb" path="res://OfficeSupplies/ComputerGame.png" id="5_ur7fn"]
 
 [node name="GameManager" unique_id=2083841095 instance=ExtResource("1_yfiuw")]
 
@@ -21,3 +25,46 @@ position = Vector2(877, 504)
 
 [node name="Human5" parent="." index="15" unique_id=1903129750]
 position = Vector2(601, 182)
+
+[node name="Sprite2D3" type="Sprite2D" parent="." index="23" unique_id=325033783]
+position = Vector2(831, 317)
+scale = Vector2(0.216797, 0.216797)
+texture = ExtResource("2_h8ohp")
+
+[node name="Sprite2D4" type="Sprite2D" parent="." index="24" unique_id=290371277]
+position = Vector2(197, 447)
+scale = Vector2(0.328125, 0.328125)
+texture = ExtResource("3_pgs76")
+
+[node name="Sprite2D5" type="Sprite2D" parent="." index="25" unique_id=1602368172]
+position = Vector2(656, 483)
+scale = Vector2(0.2265625, 0.2265625)
+texture = ExtResource("4_7j3iv")
+
+[node name="Sprite2D6" type="Sprite2D" parent="." index="26" unique_id=989772391]
+position = Vector2(404, 318)
+scale = Vector2(0.18945305, 0.18945305)
+texture = ExtResource("2_h8ohp")
+
+[node name="Sprite2D7" type="Sprite2D" parent="." index="27" unique_id=651067079]
+position = Vector2(1087, 61.000008)
+scale = Vector2(0.24609375, 0.24609375)
+texture = ExtResource("5_ur7fn")
+
+[node name="PlantJar" parent="." index="28" unique_id=670696666]
+visible = false
+
+[node name="Plant" parent="." index="29" unique_id=1693933261]
+visible = false
+
+[node name="Plant2" parent="." index="30" unique_id=1444298483]
+visible = false
+
+[node name="WaterCooler" parent="." index="31" unique_id=2024204382]
+visible = false
+
+[node name="Banana" parent="." index="32" unique_id=84631767]
+visible = false
+
+[node name="Sprite2D2" parent="." index="33" unique_id=243738783]
+position = Vector2(188, 256)

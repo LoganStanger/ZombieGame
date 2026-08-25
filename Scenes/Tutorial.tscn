@@ -374,4 +374,85 @@ theme_override_font_sizes/font_size = 35
 text = "CONTINUE"
 script = ExtResource("20_8nvbb")
 
+[node name="A" type="Label" parent="." unique_id=252246888]
+offset_left = 591.0
+offset_top = 130.0
+offset_right = 637.0
+offset_bottom = 162.0
+theme_override_font_sizes/font_size = 23
+text = "A"
+horizontal_alignment = 1
+
+[node name="B" type="Label" parent="." unique_id=1066558260]
+offset_left = 739.0
+offset_top = 131.0
+offset_right = 785.0
+offset_bottom = 163.0
+theme_override_font_sizes/font_size = 23
+text = "B"
+horizontal_alignment = 1
+
+[node name="C" type="Label" parent="." unique_id=955034150]
+offset_left = 910.0
+offset_top = 135.0
+offset_right = 956.0
+offset_bottom = 167.0
+theme_override_font_sizes/font_size = 23
+text = "C"
+horizontal_alignment = 1
+
+[node name="D" type="Label" parent="." unique_id=2049524464]
+offset_left = 590.0
+offset_top = 307.0
+offset_right = 636.0
+offset_bottom = 339.0
+theme_override_font_sizes/font_size = 23
+text = "D"
+horizontal_alignment = 1
+
+[node name="E" type="Label" parent="." unique_id=1762763990]
+offset_left = 759.0
+offset_top = 318.0
+offset_right = 805.0
+offset_bottom = 350.0
+theme_override_font_sizes/font_size = 23
+text = "E"
+horizontal_alignment = 1
+
+[node name="F" type="Label" parent="." unique_id=1552766720]
+offset_left = 897.0
+offset_top = 321.0
+offset_right = 943.0
+offset_bottom = 353.0
+theme_override_font_sizes/font_size = 23
+text = "F"
+horizontal_alignment = 1
+
+[node name="G" type="Label" parent="." unique_id=1356333061]
+offset_left = 590.0
+offset_top = 495.0
+offset_right = 636.0
+offset_bottom = 527.0
+theme_override_font_sizes/font_size = 23
+text = "G"
+horizontal_alignment = 1
+
+[node name="H" type="Label" parent="." unique_id=7980846]
+offset_left = 745.0
+offset_top = 494.0
+offset_right = 791.0
+offset_bottom = 526.0
+theme_override_font_sizes/font_size = 23
+text = "H"
+horizontal_alignment = 1
+
+[node name="I" type="Label" parent="." unique_id=1102627763]
+offset_left = 887.0
+offset_top = 507.0
+offset_right = 933.0
+offset_bottom = 539.0
+theme_override_font_sizes/font_size = 23
+text = "I"
+horizontal_alignment = 1
+
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
