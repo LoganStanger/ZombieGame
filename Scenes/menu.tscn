@@ -1,9 +1,130 @@
 [gd_scene format=3 uid="uid://xr54p2nuh4lq"]
 
 [ext_resource type="Script" uid="uid://uf1bnbd88agn" path="res://sciptQuestionMark/button.gd" id="1_1rerr"]
-[ext_resource type="Texture2D" uid="uid://cu3ewkkrdbie0" path="res://Zombie Game 2!!!! (1).png" id="2_xhh6f"]
+[ext_resource type="Texture2D" uid="uid://ncyxaoovw166" path="res://ZombieMenu.png" id="2_xhh6f"]
+[ext_resource type="Script" uid="uid://bsvyumjur4cpv" path="res://sciptQuestionMark/zombieMenuPlease.gd" id="3_cayip"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_cayip"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cayip"]
+atlas = ExtResource("2_xhh6f")
+region = Rect2(0, 0, 1504, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_158mb"]
+atlas = ExtResource("2_xhh6f")
+region = Rect2(1504, 0, 1504, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wwsa2"]
+atlas = ExtResource("2_xhh6f")
+region = Rect2(3008, 0, 1504, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jsrd8"]
+atlas = ExtResource("2_xhh6f")
+region = Rect2(0, 1024, 1504, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wbdvm"]
+atlas = ExtResource("2_xhh6f")
+region = Rect2(1504, 1024, 1504, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q3rjx"]
+atlas = ExtResource("2_xhh6f")
+region = Rect2(3008, 1024, 1504, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6swd7"]
+atlas = ExtResource("2_xhh6f")
+region = Rect2(0, 2048, 1504, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7qvly"]
+atlas = ExtResource("2_xhh6f")
+region = Rect2(1504, 2048, 1504, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rfqti"]
+atlas = ExtResource("2_xhh6f")
+region = Rect2(3008, 2048, 1504, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g8i7c"]
+atlas = ExtResource("2_xhh6f")
+region = Rect2(0, 3072, 1504, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_23t3j"]
+atlas = ExtResource("2_xhh6f")
+region = Rect2(1504, 3072, 1504, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ph6h"]
+atlas = ExtResource("2_xhh6f")
+region = Rect2(3008, 3072, 1504, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ti5v"]
+atlas = ExtResource("2_xhh6f")
+region = Rect2(0, 4096, 1504, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1by5w"]
+atlas = ExtResource("2_xhh6f")
+region = Rect2(1504, 4096, 1504, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kmwmt"]
+atlas = ExtResource("2_xhh6f")
+region = Rect2(3008, 4096, 1504, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rc6uw"]
+atlas = ExtResource("2_xhh6f")
+region = Rect2(0, 5120, 1504, 1024)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dldpb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cayip")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_158mb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wwsa2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jsrd8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wbdvm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q3rjx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6swd7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7qvly")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rfqti")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g8i7c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_23t3j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8ph6h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ti5v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1by5w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kmwmt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rc6uw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Node2D" type="Node2D" unique_id=1647401964]
 
@@ -16,12 +137,6 @@ offset_bottom = 336.0
 text = "Play"
 script = ExtResource("1_1rerr")
 
-[node name="ZombieThumbnail" type="Sprite2D" parent="." unique_id=336204432]
-z_index = 5
-position = Vector2(599.99994, 328)
-scale = Vector2(0.8847754, 0.8847752)
-texture = ExtResource("2_xhh6f")
-
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=914938683]
 position = Vector2(36.000004, 324.00003)
 scale = Vector2(104.00001, 663.99994)
@@ -31,5 +146,11 @@ texture = SubResource("CanvasTexture_cayip")
 position = Vector2(1128, 324.00003)
 scale = Vector2(96.00006, 663.99994)
 texture = SubResource("CanvasTexture_cayip")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1597792851]
+position = Vector2(576.00006, 360)
+scale = Vector2(0.76367205, 0.7636719)
+sprite_frames = SubResource("SpriteFrames_dldpb")
+script = ExtResource("3_cayip")
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

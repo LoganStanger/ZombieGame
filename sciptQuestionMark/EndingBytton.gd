@@ -12,4 +12,7 @@ func _process(_delta: float) -> void:
 func _on_pressed() -> void:
 	if self.modulate.a == 1:
 		Booyah.level = 1
+		Booyah.steadyHunger = 200
+		Booyah.DroneSpawn = 6
+		Booyah.RobotSpawn = 6
 		get_tree().change_scene_to_file("res://Scenes/menu.tscn")
