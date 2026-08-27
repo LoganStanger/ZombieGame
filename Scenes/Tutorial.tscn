@@ -286,31 +286,31 @@ animations = [{
 [node name="TextEdit" type="TextEdit" parent="." unique_id=1729130279]
 offset_left = 29.0
 offset_top = 6.0
-offset_right = 576.0
+offset_right = 596.0
 offset_bottom = 643.0
 theme_override_font_sizes/font_size = 17
 text = "TUTORIAL:
-In this game, you (A), will try to hunt down 
-humans (E) to get their keycard (F). Humans will
-only have a small chance of dropping their keycard
-so you have to eat multiple of them. Humans also
-come in all shapes and sizes, so keep wary.
+In this game, you (A), will try to hunt down humans (E) to get their 
+keycard (F). Humans will only have a small chance of dropping their 
+keycard so you have to eat multiple of them. Humans also come in 
+many different appearances (shown to the right).
 
-A timer (I) will also be constantly ticking down, this
-is your hunger. Eat humans to increase your hunger
-bar by a sizable amount.
+A timer (I) will also be constantly ticking down, this is your hunger.
+Eat humans to increase your hunger bar by a sizable amount.
 
-However you're not alone... you'll have to run away 
-from enemies while eating. Also in the floor are 
-drones (C) and robots (H). Drones and robots spawn
-from doors (G), and slowly spawn faster. When
-touching an enemy, you will start to lose hunger 
-faster and the emergency sign (B) will start flashing
-to warn you. 
+However you're not alone... you'll have to run away from enemies
+while eating. Also in the floor are drones (C) and robots (H). Drones 
+and robots spawn from doors (G), and slowly spawn faster. When
+touching an enemy, you will start to lose hunger faster and the
+emergency sign (B) will start flashing to warn you. 
 
 When you have the keycard, the level isn't over yet.
 Run back to the elevator (D) to go to the next level.
-Have fun!"
+Have fun!
+
+
+P.S Hold space to sprint, moving faster at the cost of more hunger.
+P.P.S You can only see a little bit around yourself at any time."
 script = ExtResource("1_5gw1s")
 
 [node name="Zombie" type="AnimatedSprite2D" parent="." unique_id=656670043]

@@ -345,7 +345,7 @@ position = Vector2(638, 64)
 collision_mask = 1
 
 [node name="LevelBarTemp" type="Label" parent="." unique_id=1957414686]
-z_index = 5
+z_index = 99
 offset_left = -1.0
 offset_top = 552.0
 offset_right = 167.0
@@ -360,7 +360,7 @@ wait_time = 0.1
 autostart = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1565151067]
-z_index = 5
+z_index = 99
 position = Vector2(1068, 594.00006)
 scale = Vector2(0.27438432, 0.27438435)
 texture = ExtResource("7_qv86q")
@@ -397,7 +397,6 @@ position = Vector2(250, 37)
 script = ExtResource("15_3rxv8")
 
 [node name="Curtain" type="Sprite2D" parent="." unique_id=1575557759]
-visible = false
 z_index = 87
 position = Vector2(597, 334.00003)
 scale = Vector2(3.17, 1.985955)
@@ -460,12 +459,14 @@ offset_bottom = 45.0
 
 [node name="HealthUI" parent="." unique_id=1660745684 instance=ExtResource("22_ef70v")]
 process_mode = 3
+z_index = 99
 offset_left = 750.0
 offset_top = 553.0
 offset_right = 750.0
 offset_bottom = 553.0
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="." unique_id=591944874]
+z_index = 99
 position = Vector2(713, 599.00006)
 scale = Vector2(0.36567163, 0.36567166)
 sprite_frames = SubResource("SpriteFrames_e354r")

@@ -21,3 +21,4 @@ var global_positionX
 var Leaving = false
 var newbie = true
 var curtainFinal = false
+var curtainTwice = false
